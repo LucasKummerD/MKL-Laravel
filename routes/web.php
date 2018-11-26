@@ -26,3 +26,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//----- Cliente
+
+Route::get('/perfil', 'ClientController@index')->name('perfil');
+Route::get('/perfil/producto', 'ClientControler@show');
+
+
+//----- Admin
+
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/create', 'AdminController@create');
+Route::post('/admin/create', 'AdminController@store');
+Route::get('/admin/edit', 'AdminController@edit');
+Route::get('/admin/delete', 'AdminController@destroy');
