@@ -20,7 +20,7 @@ class ProductTable extends Migration
             $table->float('precio', 5, 2);
             $table->unsignedInteger('stock');
             
-            //$table->foreign('--nombre de la foreing key--')->references('id')->on('--tabla--');
+            //$table->foreign('--nombre de la foreing key--')->references('--id de la tabla--')->on('--tabla--');
             $table->timestamps();
         });
     }
