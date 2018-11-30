@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');  
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/master', 'HomeController@index')->name('master'); 
 
 //----- Cliente
 
@@ -28,8 +28,9 @@ Route::get('/perfil/producto', 'ClientControler@show');
 //----- Admin
 
 Route::get('/admin', 'AdminController@index')->name('admin');
-Route::get('/admin/show', 'AdminController@show')->name('admin_show');  //hacer que muestre solo el prpoducto tmb {id}
+Route::get('/admin/{id}/show', 'AdminController@show');  //hacer que muestre solo el producto tmb {id}
 Route::get('/admin/create', 'AdminController@create')->name('admin_create');
 Route::post('/admin/create', 'AdminController@store');  //falta este
 Route::get('/admin/{id}/edit', 'AdminController@edit');
 Route::get('/admin/{id}/delete', 'AdminController@destroy');
+Route::get('/admin/show/users', 'AdminController@showClients');

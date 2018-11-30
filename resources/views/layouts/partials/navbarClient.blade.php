@@ -26,7 +26,7 @@
                     <a class="dropdown-item" style="color: #142430" href="">Seguridad</a>
                     <a class="dropdown-item" style="color: #142430" href="">Carrito</a>
                     <a class="dropdown-item" style="color: #142430" href="">Perfil</a>
-                    <a class="dropdown-item" style="color: #142430" href="logout.php">Cerrar Sesión</a>
+                    <a class="dropdown-item" style="color: #142430" href="">Cerrar Sesión</a>
                 </div>
             </li>                
             </ul>

@@ -10,9 +10,6 @@
                 <a class="nav-link" style="color: white" href="index1.php"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color: white" href="registrarse.php"></a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" style="color: rgb(179, 195, 228)" href="iniciar-sesion.php"></a>
             </li>
             <li class="nav-item">
@@ -22,10 +19,10 @@
                 <a class="nav-link dropdown-toggle" style="color: white" href="#" id="cuenta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta</a>
                     <div class="dropdown-menu dropdown-menu-right" style="background-color: #4a9ad3" readonly aria-labelledby="lineas">
                         <a class="dropdown-item" style="color: #142430" href=""></a>
-                        <a class="dropdown-item" style="color: #142430" href="">Insertar Productos</a>
-                        <a class="dropdown-item" style="color: #142430" href="">Productos</a> 
-                        <a class="dropdown-item" style="color: #142430" href="perfil.php">Perfil</a>
-                        <a class="dropdown-item" style="color: #142430" href="logout.php">Cerrar Sesión</a>
+                        <a class="dropdown-item" style="color: #142430" href="/admin/create">Insertar Productos</a>
+                        <a class="dropdown-item" style="color: #142430" href="/admin">Productos</a> 
+                        <a class="dropdown-item" style="color: #142430" href="">Perfil</a>
+                        <a class="dropdown-item" style="color: #142430" href="">Cerrar Sesión</a>
                     </div>
             </li>                    
             </ul>

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.masterAdmin')
 
 @section('content')
     <header class="bg-dark text-white">

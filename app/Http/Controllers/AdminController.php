@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
+use App\User;
+use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,8 +17,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
-        //   QUE MUESTRE LA LISTA DE PRODUCTOS Y UN BOTON AL LADO DONDE SE PUEDA EDITAR O ELIMINAR EL PRODUCTO!
+        $products = Product::all();
+        return view('admin.index')->with('products', $products);
     }
 
     /**
@@ -24,9 +28,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        $product = Product::all();
-        return view('admin.create')->with('product', $product);  
-        //aca hay algo que no entiendo!
+        return view('admin.create')->with('products', Product::all());
     }
 
     /**
@@ -37,7 +39,31 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'precio' => 'required',
+            'stock' => 'required',
+            'filepath' => 'mimetypes:application/zip'
+        ];
+
+        $messages = [
+            'required' => 'el campo :attribute es requerido'
+        ];
+       
+
+        $this->validate($request, $rules, $messages);
+
+        $product = new Product($request->all());
+        
+        if($request->file('filepath') !== null) {
+            $file = $request->file('filepath')->store('uploads');
+            $product->filepath = $file;
+        }
+        
+        $product->save();
+
+        return redirect('/admin/create' . $product->id);
     }
 
     /**
@@ -98,5 +124,10 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showClients() 
+    {
+        return view('show_clients.blade.php');
     }
 }

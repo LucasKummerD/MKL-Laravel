@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ProductTable extends Migration
+class CartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class ProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('cart', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('descripcion');
-            $table->float('precio', 5, 2);
-            $table->unsignedInteger('stock');
+            $table->unsignedInteger('cantidad');
+            $table->string('producto');
+            $table->float('precioUnitario', 5, 2);
+            $table->string('precioTotal', 7, 2);
             
-            //$table->foreign('--nombre de la foreing key--')->references('--id de la tabla--')->on('--tabla--');
+            //$table->foreign('id_product')->references('id')->on('products');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class ProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('cart');
     }
 }

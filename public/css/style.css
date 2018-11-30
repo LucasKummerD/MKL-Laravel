@@ -1,0 +1,216 @@
+body {
+    padding-top: 30px;
+  	}
+  
+  	@media (min-width: 992px) {
+    	body {
+      		padding-top: 150px;
+    	}
+ 	}
+
+/*------------------------------------------Header-----------------------------------------------------*/
+
+	.navbar-brand{
+		width: 230px;
+		float: left;
+
+	}
+
+  	.carousel-item {
+	/* padding-top: 100px;*/
+    height: 600px;
+    min-height: 250px;
+    background: no-repeat bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  	}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------- PRODUCTOS DESTACADOS---------------------------------------- */
+
+	.container {
+	font-family: Verdana, sans-serif;
+	text-align: center;
+	text-decoration-color: rgb(3, 96, 136);
+  	}
+
+	.portfolio-item {
+    margin-bottom: 30px;
+  	}
+
+	.my-4 {
+	text-align: center;   
+  	}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------- Preguntas Frecuentes ----------------------------------------*/
+
+	.preguntas {
+	text-align: center;  
+	color: rgb(116, 110, 110);
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------Formulario-------------------------------------------------*/
+
+	.btn {
+		color: white;
+		height: 50px;
+		width: 30%;
+		float: left;
+		border:50%;
+		box-shadow: 0 0 1px #ccc;
+		-webkit-transition-duration: 4s;
+		-webkit-transition-timing-function: linear;
+		box-shadow:0px 0 0 #319aca  inset;
+	}
+
+	.btn:hover {
+		box-shadow:400px 0 0 #319aca  inset;
+	}
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------Hover del Dropdown--------------------------------------------*/
+	
+	.lineas:hover {
+	transform: scale(1.2px)
+	}
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* --------------------------------------------------FOOTER--------------------------------------------*/
+
+	.footer-distributed{
+		background-color: #292c2f;
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+		box-sizing: border-box;
+		width: 100%;
+		text-align: left;
+		padding: 5% 7%;
+		margin-top: 2%
+
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	/* Footer left */
+
+	.footer-distributed .footer-left{
+		width: 33%;
+	}
+
+
+
+	/* Footer Center */
+
+	.footer-distributed .footer-center{
+		width: 35%;
+	}
+
+	.footer-distributed .footer-center i{
+		background-color:  #33383b;
+		color: #ffffff;
+		font-size: 25px;
+		width: 38px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 42px;
+		margin: 10px 15px;
+		vertical-align: middle;
+	}
+
+	.footer-distributed .footer-center i.fa-envelope{
+		font-size: 17px;
+		line-height: 38px;
+	}
+
+	.footer-distributed .footer-center p{
+		display: inline-block;
+		color: #ffffff;
+		vertical-align: middle;
+		margin:0;
+	}
+
+	.footer-distributed .footer-center p span{
+		display:block;
+		font-weight: normal;
+		font-size:14px;
+		line-height:2;
+	}
+
+	.footer-distributed .footer-center p a{
+		color:  #5383d3;
+		text-decoration: none;;
+	}
+
+
+	/* Footer Right */
+
+	.footer-distributed .footer-right{
+		width: 20%;
+	}
+
+	.footer-distributed .footer-company-about{
+		line-height: 20px;
+		color:  #92999f;
+		font-size: 13px;
+		font-weight: normal;
+		margin: 0;
+	}
+
+	.footer-distributed .footer-icons{
+		margin-top: 25px;
+	}
+
+	.footer-distributed .footer-icons a{
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		cursor: pointer;
+		background-color:  #33383b;
+		border-radius: 2px;
+
+		font-size: 20px;
+		color: #ffffff;
+		text-align: center;
+		line-height: 35px;
+
+		margin-right: 3px;
+		margin-bottom: 5px;
+	}
+
+
+	@media (max-width: 880px) {
+
+		.footer-distributed{
+			font: bold 14px sans-serif;
+		}
+
+		.footer-distributed .footer-left,
+		.footer-distributed .footer-center,
+		.footer-distributed .footer-right{
+			display: block;
+			width: 100%;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+
+		.footer-distributed .footer-center i{
+			margin-left: 0;
+		}
+	}
+
+	.footer-company-name{
+		display: block;
+		color:  #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+/* ----------------------------------------------FIN DEL FOOTER-----------------------------------------------*/
