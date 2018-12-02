@@ -21,8 +21,9 @@ Route::get('/master', 'HomeController@index')->name('master');
 
 //----- Cliente
 
-Route::get('/perfil', 'ClientController@index')->name('perfil');
-Route::get('/perfil/producto', 'ClientControler@show');
+Route::get('/home', 'ClientController@index')->name('perfil');
+Route::get('/productos', 'ClientController@showProducts')->name('productos');
+Route::get('/productos/{id}', 'ClientControler@show')->name('producto');
 
 
 //----- Admin
