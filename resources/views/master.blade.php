@@ -9,7 +9,7 @@
         <div>
             <div class="content">
                 <div class="title m-b-md">
-                    <h1>MKL</h1> 
+                    <img src="{{ asset('MKL-01.png') }}">
                 </div>
             </div>
         </div>

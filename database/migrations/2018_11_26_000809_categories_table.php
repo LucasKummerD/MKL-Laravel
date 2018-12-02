@@ -13,7 +13,19 @@ class CategoriesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('categories', function (Blueprint $table) {
+           $table->increments('id');
+           $table->string('name');
+
+
+/*            $table->unsignedInteger('product_id');
+           
+           $table->foreign('product_id')->references('id')->on('products'); */
+
+
+           
+           $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +35,6 @@ class CategoriesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('categories');
     }
 }

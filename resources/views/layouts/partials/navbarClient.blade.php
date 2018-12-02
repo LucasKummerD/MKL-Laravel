@@ -23,9 +23,7 @@
                 <div class="dropdown-menu dropdown-menu-right" style="background-color: #4a9ad3" readonly aria-labelledby="lineas">
                     <a class="dropdown-item" style="color:white" href=""></a>
                     <a class="dropdown-item" style="color:white" href="">Datos Personales</a>
-                    <a class="dropdown-item" style="color:white" href="">Seguridad</a>
                     <a class="dropdown-item" style="color:white" href="">Carrito</a>
-                    <a class="dropdown-item" style="color:white" href="">Perfil</a>
                     <a class="dropdown-item" style="color:white" href="{{ route('master') }}">Cerrar Sesion</a>
                 </div>
             </li>                

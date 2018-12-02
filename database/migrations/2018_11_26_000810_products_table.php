@@ -19,10 +19,9 @@ class ProductsTable extends Migration
             $table->string('descripcion');
             $table->float('precio', 5, 2);
             $table->unsignedInteger('stock');
-            
-            
-            //$table->foreign('category_id')->reference('id')->on('categories');
-            //$table->foreign('--nombre de la foreing key--')->references('--id de la tabla--')->on('--tabla(de reference) plural--');
+            $table->unsignedInteger('category_id');
+
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

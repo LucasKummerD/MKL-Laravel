@@ -35,3 +35,4 @@ Route::post('/admin/create', 'AdminController@store');  //falta este
 Route::get('/admin/{id}/edit', 'AdminController@edit');
 Route::get('/admin/{id}/delete', 'AdminController@destroy');
 Route::get('/admin/show/users', 'AdminController@showClients');
+
