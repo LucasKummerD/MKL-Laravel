@@ -13,14 +13,14 @@ class ProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('products',function(Blueprint$table){
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->float('precio', 5, 2);
+            $table->float('precio',5,2);
             $table->unsignedInteger('stock');
             $table->unsignedInteger('category_id');
-
+            
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });

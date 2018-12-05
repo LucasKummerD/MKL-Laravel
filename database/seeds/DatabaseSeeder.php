@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $categories = factory(Category::class)->times(6)->create();
         $products = factory(Product::class)->times(30)->create([
-            'id_category' => $categories->random()->id
-        ]);
+            'category_id' => rand(1,6)
+        ]);        
     }
 }

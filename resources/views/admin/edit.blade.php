@@ -12,9 +12,10 @@
             <div class="row">
                 <div class="col-8 mx-auto bg-light rounded">
                     <div class="signup-form">
-                        <form action="controlador/insertar.php" method="post">
+                        <form action="" method="post">  <!-- controlador/insertar.php -->
+                        @csrf
                             <div class="col-8 offset-sm-2 text-center my-3">
-                                <h2>Nombre del producto</h2>     
+                                <h2>{{ $product['nombre'] }}</h2>     
                             </div>
                             
                             <div class="form-group">

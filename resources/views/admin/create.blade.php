@@ -12,7 +12,8 @@
             <div class="row">
                 <div class="col-8 mx-auto bg-light rounded">
                     <div class="signup-form">
-                        <form action='' method="post">
+                        <form action="" method="post">
+                        @csrf
                             <div class="col-8 offset-sm-2 text-center my-3">
                                 <h2>Registrar producto</h2>
                             </div>

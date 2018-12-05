@@ -60,10 +60,11 @@ class AdminController extends Controller
             $file = $request->file('filepath')->store('uploads');
             $product->filepath = $file;
         }
+        dd($product);
         
         $product->save();
 
-        return redirect('/admin/create' . $product->id);
+        return redirect('/admin');
     }
 
     /**
@@ -128,6 +129,17 @@ class AdminController extends Controller
 
     public function showClients() 
     {
-        return view('show_clients.blade.php');
+    $users = User::all();
+    return view('admin.show_clients')->with('users', $users);
     }
+
+    public function showClient($id) 
+    {
+    $user = User::find($id);
+    return view('admin.show_client')->with('user', $user);
+                
+                //va a haber que agregar mas cmapos!
+
+    }
+    
 }
