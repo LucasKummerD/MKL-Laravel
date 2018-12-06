@@ -25,7 +25,53 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  	}
+	  }
+	  
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------- ICONOS REDES SOCUALES---------------------------------------- */
+
+	.fa {
+		padding: 20px;
+		font-size: 30px;
+		width: 60px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 50%;
+	}
+
+	/* Facebook */
+	.fa-facebook {
+		background: #3B5998;
+		color: white;
+	}
+
+	/* Twitter */
+	.fa-twitter {
+	background: #55ACEE;
+	color: white;
+	}
+
+	/* Google */
+	.fa-google {
+	background: #DD4B39;
+	color: white;
+	}
+
+
+	/* Linkedin */
+	.fa-linkedin {
+	background: #007BB6;
+	color: white;
+	}
+
+	/* Instagram */
+	.fa-instagram {
+	background: #3F729B;
+	color: white;
+	}
+
 /*----------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------- PRODUCTOS DESTACADOS---------------------------------------- */

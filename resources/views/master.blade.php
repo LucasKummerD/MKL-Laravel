@@ -9,7 +9,7 @@
         <div>
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{ asset('MKL-01.png') }}">
+                    <img src="{{ asset('assets/MKL-01.png') }}">
                 </div>
             </div>
         </div>
