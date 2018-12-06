@@ -1,4 +1,4 @@
-@extends('layouts.partials.navbarAdmin') 
+@extends('layouts.app') 
 
 @section('content')
 

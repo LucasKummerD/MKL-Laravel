@@ -2,18 +2,21 @@
 
 @section('content')
 
-    <div class="offset-2 col-6">
+    <div class="offset-2 col-8">
         <h1>Listado de Productos</h1>
-        <ul>
-            @foreach($products as $product)
-            <li>
-                <a href="#">{{ $product->nombre }}, {{ $product->descripcion }}, {{ $product->precio }}, {{   $product->stock }}
-                    <button type="submit" class="btn btn-lg btn-block bg-purple font-white">Modificar</button>
-                    <button type="submit" class="btn btn-lg btn-block bg-purple font-white">Eliminar</button>
-                </a>
-            </li>
-            @endforeach
-        </ul>
+        <div>
+            <ul>
+                @foreach($products as $product)
+                    <li class="buttons-admin">
+                    <div class="d-flex justify-content-end">
+                        <a href="/admin/{id}/show">{{ $product->nombre }} $ {{ $product->precio }}.- {{ $product->stock }} unidades</a>   
+                        <button type="submit" class="btn btn-info">Modificar</button>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>     
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 
 @endsection

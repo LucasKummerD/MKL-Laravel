@@ -1,4 +1,4 @@
-@extends('layouts.partials.navbarAdmin') 
+@extends('layouts.app') 
 
 @section('content')
 
@@ -9,12 +9,12 @@
         <ul class="unstyled-list">
             @foreach($users as $user)
             <li class="d-flex flex-row">
-                <a class="mr-auto p-2" href="admin/showUser/{$id}">{{ $user->name }}</a> <h6>{{ $user->email }}</h6>
+                <a class="mr-auto p-2">{{ $user->name }} - {{ $user->email }} </a>
                 <div class="buttons-admin d-flex">
-                    <form action="" method="post" class="p-2">  <!-- backoffice/users/delete/{{ $user->id }} -->                        {{ csrf_field() }}
+                    <form action="" method="post" class="p-2">                    
+                        {{ csrf_field() }}
                         {{ method_field('patch') }}
-                        <input type="submit" value="Eliminar" class="btn btn-danger">
-                        <input type="submit" value="Modificar" class="btn btn-info">
+                    <input type="submit" value="Ver Más" class="btn btn-info">
                     </form> 
                 </div>
             </li>

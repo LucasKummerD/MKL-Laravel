@@ -73,9 +73,13 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showProduct($id)
     {
-        return view('admin.show_product');
+        $category = Category::all();
+        $product = Product::find($id);
+        return view('admin.show_product')
+                    ->with('product', $product)
+                    ->with('category', $product->category['name']);
     }
 
     /**
@@ -104,7 +108,7 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = product::find($id);
+        $product = Product::find($id);
 
         $product->nombre = $request->input('nombre');
         $product->descripcion = $request->input('descripcion');
