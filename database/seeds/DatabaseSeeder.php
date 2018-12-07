@@ -15,8 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $categories = factory(Category::class)->times(6)->create();
-        $products = factory(Product::class)->times(30)->create([
-            'category_id' => rand(1,6)
-        ]);        
+        $products = factory(Product::class)->times(30)->create();        
     }
 }
+

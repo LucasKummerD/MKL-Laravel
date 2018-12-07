@@ -4,8 +4,7 @@
 
     <div class="row">
         <div class="col-6 offset-3">
-            <h2>Informacion del Producto</h2>
-            
+            <h2>Informacion del Producto</h2>            
             <hr>
             <h4>{{ $product->nombre }}</h4>
             <h6>{{ $product->descripcion }}</h6> 

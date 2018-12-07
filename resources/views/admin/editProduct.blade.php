@@ -19,24 +19,28 @@
                             </div>
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nombre" placeholder="Nombre del Producto" >
+                                <input type="text" class="form-control" name="nombre" placeholder="{{ $product->nombre }}" >
                             </div>
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="descripcion" placeholder="Breve descripción del Producto" >
+                                <input type="text" class="form-control" name="descripcion" placeholder="{{ $product->descripcion }}" >
                             </div>	
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="id_categoria" placeholder="Indique el código de la categoría" >
+                                <input type="text" class="form-control" name="precio" placeholder="{{ $product->precio }}" >
                             </div>
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="precio" placeholder="Precio del Producto" >
+                                <input type="text" class="form-control" name="precio" placeholder="{{ $product->stock }}" >
                             </div>
-                            
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="id_categoria" placeholder="{{ $product->category->name }}" >
+                            </div>                           
+
                             <div class="form-group col-lg-10 mx-auto">
                                 <label>Foto del Producto</label>
-                                <input type="file" name="producto">
+                                <input type="file" name="">
                             </div>
 
                             <div class="form-group col-10 m-auto col-sm-8 offset-sm-2">

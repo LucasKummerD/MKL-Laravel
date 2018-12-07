@@ -13,23 +13,23 @@
 
             <!-- Facebook -->
             <a class="fb-ic">
-                <a href="https://es-la.facebook.com/" target="_blank"><i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
+                <a href="https://es-la.facebook.com/" target="_blank"><i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-1x"> </i></a>
             </a>
             <!-- Twitter -->
             <a class="tw-ic">
-                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"> </i> </a>
             </a>
             <!-- Google -->
             <a class="gplus-ic">
-                <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google fa-lg white-text mr-md-5 mr-3 fa-1x"> </i> </a>
             </a>
             <!--Linkedin -->
             <a class="li-ic">
-                <a href="https://ar.linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                <a href="https://ar.linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-1x"> </i> </a>
             </a>
             <!--Instagram-->
             <a class="ins-ic">
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"> </i> </a>
             </a>
 
             </div>
@@ -65,8 +65,8 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-4">© 2018 Copyright:
-      <a> Padluk.com</a>
+    <div class="footer-copyright text-center py-4">© 2018 Copyright
+      <a> PadLuk.com</a>
     </div>
     <!-- Copyright -->
 

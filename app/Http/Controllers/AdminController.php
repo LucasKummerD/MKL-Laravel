@@ -18,7 +18,7 @@ class AdminController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('admin.index')->with('products', $products);
+        return view('admin.showProducts')->with('products', $products);
     }
 
     /**
@@ -44,7 +44,7 @@ class AdminController extends Controller
             'descripcion' => 'required',
             'precio' => 'required',
             'stock' => 'required',
-            'filepath' => 'mimetypes:application/zip'
+            'category_id' => 'required'
         ];
 
         $messages = [
@@ -60,11 +60,11 @@ class AdminController extends Controller
             $file = $request->file('filepath')->store('uploads');
             $product->filepath = $file;
         }
-        dd($product);
+       
         
         $product->save();
 
-        return redirect('/admin');
+        return redirect('admin/showProducts');
     }
 
     /**
@@ -77,9 +77,9 @@ class AdminController extends Controller
     {
         $category = Category::all();
         $product = Product::find($id);
-        return view('admin.show_product')
+        return view('admin.edit')
                     ->with('product', $product)
-                    ->with('category', $product->category['name']);
+                    ->with('category', $product->category); 
     }
 
     /**
@@ -90,30 +90,32 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
+
         $category = Category::all();
         $product = Product::find($id);
 
-        return view('admin.edit')
+        return view('admin.editProduct')
             ->with('product', $product)
             ->with('category', $product->category)
             ->with('category', $category);
     }
 
-    /**
+    /**     
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
         $product = Product::find($id);
 
-        $product->nombre = $request->input('nombre');
-        $product->descripcion = $request->input('descripcion');
-        $product->precio = $request->input('precio');
-        $product->stock= $request->input('stock');
+        $product->nombre = input('nombre');
+        $product->descripcion = input('descripcion');
+        $product->precio = input('precio');
+        $product->stock = input('stock');
+        $product->category_id = input('category_id');
         
         $product->save();
 
@@ -134,13 +136,13 @@ class AdminController extends Controller
     public function showClients() 
     {
     $users = User::all();
-    return view('admin.show_clients')->with('users', $users);
+    return view('admin.showClients')->with('users', $users);
     }
 
     public function showClient($id) 
     {
     $user = User::find($id);
-    return view('admin.show_client')->with('user', $user);
+    return view('admin.showClient')->with('user', $user);
                 
                 //va a haber que agregar mas cmapos!
 
