@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\User;
 use App\Category;
 use App\Product;
@@ -70,14 +69,14 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
     public function showProduct($id)
     {
         $category = Category::all();
         $product = Product::find($id);
-        return view('admin.edit')
+        return view('admin.showProduct')
                     ->with('product', $product)
                     ->with('category', $product->category); 
     }

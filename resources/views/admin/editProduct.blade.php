@@ -18,22 +18,27 @@
                                 <h2>{{ $product['nombre'] }}</h2>     
                             </div>
                             
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Nombre del Producto') }}</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="nombre" placeholder="{{ $product->nombre }}" >
                             </div>
                             
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Descripcion del Producto') }}</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="descripcion" placeholder="{{ $product->descripcion }}" >
                             </div>	
                             
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Precio del Producto') }}</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="precio" placeholder="{{ $product->precio }}" >
                             </div>
                             
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Stock del Producto') }}</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="precio" placeholder="{{ $product->stock }}" >
                             </div>
 
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Categoria del Producto') }}</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="id_categoria" placeholder="{{ $product->category->name }}" >
                             </div>                           

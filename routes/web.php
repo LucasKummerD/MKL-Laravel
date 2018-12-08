@@ -17,25 +17,30 @@ Route::get('/', function () {
 
 Auth::routes();
 
+/* Route::view('/', 'master')->middleware('auth'); */                                               //Quiero que me loguee a master, pero loguea a login
 Route::get('/master', 'HomeController@index')->name('master'); 
 
-//----- Cliente
-
-Route::get('/home', 'ClientController@index')->name('perfil');
-Route::get('/productos', 'ClientController@showProducts')->name('productos');
-Route::get('/productos/{id}', 'ClientControler@show')->name('producto');
+//----- Cliente                                                                                     //Ver css con Lucas
+/* Route::groupe(['prefix' => 'admin', 'middleware' => 'auth'], function() { */
+    Route::get('client/showProducts', 'ClientController@index')->name('perfil');                    //Funciona
+    Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
+    Route::get('client/{id}/delete', 'ClientController@destroy');                                   //Para el carrito eliminar productos
+/* }); */    
 
 
 //----- Admin                                              
+/* Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() { */                      //Funciona. No entiendo que es el function
+    Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona
+    Route::get('/{id}/showProduct', 'AdminController@showProduct');                                 //Funciona
+    Route::get('/create', 'AdminController@create')->name('admin_create');                          //Funciona
+    Route::post('/create', 'AdminController@store');                                                //Funciona
+    Route::get('/{id}/editProduct', 'AdminController@edit');                                        //Funciona
+    Route::patch('/{id}/editProduct', 'AdminController@update');                                    //No funciona. No genera el update
+    Route::get('/{id}/delete', 'AdminController@destroy');                                          //No funciona
+    Route::get('/showClients', 'AdminController@showClients');                                      //Funciona
+    Route::get('/{id}/showClient', 'AdminController@showClient');                                   //Funciona
+/* }); */
 
-Route::get('/admin/showProducts', 'AdminController@index')->name('admin');              //Funciona
-Route::get('/admin/{id}/showProduct', 'AdminController@showProduct');                   //Funciona
-Route::get('/admin/create', 'AdminController@create')->name('admin_create');            //Funciona
-Route::post('/admin/create', 'AdminController@store');                                  //Funciona
-Route::get('/admin/{id}/editProduct', 'AdminController@edit');                          //Funciona
-Route::patch('/admin/{id}/editProduct', 'AdminController@update');                      //No funciona. NO genera el update
-Route::get('/admin/{id}/delete', 'AdminController@destroy');                            //No funciona
-Route::get('/admin/showClients', 'AdminController@showClients');                        //Funciona
-Route::get('/admin/{id}/showClient', 'AdminController@showClient');                     //Funciona
 
 //pasar los navbar a app en el condicional! como se podria hacer para que los navbar de admin y los nav del user ponerlos en  app
+

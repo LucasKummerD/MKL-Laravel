@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -13,7 +16,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = Product::all();
+        return view('client.showProducts')-> with('products', $products);
     }
 
     /**
@@ -43,9 +47,13 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showProduct($id)
     {
-        //
+        $category = Category::all();
+        $product = Product::find($id);
+        return view('client.showProduct')
+                    ->with('product', $product)
+                    ->with('category', $product->category);
     }
 
     /**
