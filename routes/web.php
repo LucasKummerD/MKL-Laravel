@@ -22,6 +22,7 @@ Route::get('/master', 'HomeController@index')->name('master');
 
 //----- Cliente                                                                                     //Ver css con Lucas
 /* Route::groupe(['prefix' => 'admin', 'middleware' => 'auth'], function() { */
+    Route::get('client/home', 'ClientController@index');
     Route::get('client/showProducts', 'ClientController@index')->name('perfil');                    //Funciona
     Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
     Route::get('client/{id}/delete', 'ClientController@destroy');                                   //Para el carrito eliminar productos
@@ -30,6 +31,7 @@ Route::get('/master', 'HomeController@index')->name('master');
 
 //----- Admin                                              
 /* Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() { */                      //Funciona. No entiendo que es el function
+    Route::get('/home', 'AdminController@index');
     Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona
     Route::get('/{id}/showProduct', 'AdminController@showProduct');                                 //Funciona
     Route::get('/create', 'AdminController@create')->name('admin_create');                          //Funciona

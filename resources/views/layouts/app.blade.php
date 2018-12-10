@@ -25,7 +25,7 @@
             <div class="container">
             <?php //aca esta el Laravel pero no puedo cabiar el nombre. ....? ?>
                 <a class="navbar-brand " style="color:white" href="{{ url('/') }}">
-                    {{ config('app.name', 'MKL') }}
+                    <img class="navbar-brand" alt="Logo-MKL" src="{{ asset('img/assets/MKLblanco-01.png') }}">    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -79,6 +79,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        
     </div>
 </body>
 </html>

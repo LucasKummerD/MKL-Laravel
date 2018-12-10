@@ -12,11 +12,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" style="color: white" href="#" id="cuenta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta</a>
                     <div class="dropdown-menu dropdown-menu-right" style="background-color: #4a9ad3" readonly aria-labelledby="lineas">
-                        <a class="dropdown-item" style="color: #142430" href=""></a>
-                        <a class="dropdown-item" style="color: #142430" href="/admin/create">Insertar Productos</a>
-                        <a class="dropdown-item" style="color: #142430" href="/admin">Productos</a> 
-                        <a class="dropdown-item" style="color: #142430" href="">Perfil</a>
-                        <a class="dropdown-item" style="color: #142430" href="">Cerrar Sesión</a>
+                        <a class="dropdown-item" style="color: white" href=""></a>
+                        <a class="dropdown-item" style="color: white" href="/admin/create">Insertar Productos</a>
+                        <a class="dropdown-item" style="color: white" href="/admin">Productos</a> 
+                        <a class="dropdown-item" style="color: white" href="">Perfil</a>
+                        <a class="dropdown-item" style="color: white" href="{{ route('master') }}">Cerrar Sesión</a>
                     </div>
             </li>                    
             </ul>

@@ -1,10 +1,10 @@
-@extends('layouts.masterAdmin')
+@extends('layouts.masterAdmin') 
 
 @section('content')
     <header class="bg-dark text-white">
-        <div class="container text-center">
-            <h1>Carga de Stock</h1>
-            <p class="lead">Formulario para cargar productos.</p>
+        <div class="container text-center pt-3 pb-1">
+            <h3>Carga de Stock</h3>
+            <p >Formulario para cargar productos.</p>
         </div>
     </header>
     <section class="bg-home">

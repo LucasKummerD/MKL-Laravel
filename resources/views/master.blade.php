@@ -8,8 +8,8 @@
 
         <div>
             <div class="content">
-                <div class="title m-b-md">
-                    <img src="{{ asset('assets/MKL-01.png') }}">
+                <div class="title text-center">
+                    <img id="img-responsive" class="portada" alt="Logo-MKL" src="{{ asset('img/assets/MKL-01.png') }}">
                 </div>
             </div>
         </div>

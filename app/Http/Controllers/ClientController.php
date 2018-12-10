@@ -17,7 +17,7 @@ class ClientController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('client.showProducts')-> with('products', $products);
+        return view('client.home')-> with('products', $products);
     }
 
     /**

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('content')
             
           <div  id="carousel" class="carousel slide" data-ride="carousel">      
@@ -11,7 +12,8 @@
           <div class="carousel-inner" role="listbox">
 
       <!-- Slide  Uno-->
-            <div class="carousel-item active" style="background-image: url('img/Carrousel-1.jpg');">
+            <div class="carousel-item active">
+              <img  id="img-responsive" alt="Sonido y Dj" src="{{ asset('img/assets/Carrousel-01.jpg') }}">
               <div class="carousel-caption d-none d-md-block">
                 <h3></h3>
                 <p></p>
@@ -19,7 +21,8 @@
             </div>
 
       <!-- Slide Dos -->
-            <div class="carousel-item" style="background-image: url('img/Carrousel-2.jpg');">
+            <div class="carousel-item">
+              <img  id="img-responsive" alt="Barra de Tragos y vajilla" src="{{ asset('img/assets/Carrousel-2-01.jpg') }}">
               <div class="carousel-caption d-none d-md-block">
                 <h3></h3>
                 <p></p>
@@ -27,7 +30,8 @@
             </div>
 
       <!-- Slide Tres -->
-            <div class="carousel-item" style="background-image: url('img/Carrousel-3.jpg');">
+            <div class="carousel-item">
+              <img  id="img-responsive" alt="Mobiliario y Decoracion" src="{{ asset('img/assets/Carrousel-3-01.jpg') }}">
               <div class="carousel-caption d-none d-md-block">
                 <h3></h3>
                 <p></p>
@@ -57,7 +61,7 @@
         <div class="row">
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Foto-1.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-1.jpg') }}" alt="Foto 1"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">COMBO 1</a>
@@ -69,7 +73,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-2.jpg') }}" alt="Foto 2"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">COMBO 2</a>
@@ -81,7 +85,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-3.jpg') }}" alt="Foto 3"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">COMBO 3</a>
@@ -93,7 +97,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Foto -4.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-4.jpg') }}" alt="Foto 4"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">PRODUCTO 4</a>
@@ -105,7 +109,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Foto -5-05.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-5.jpg') }}" alt="Foto 5"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">PRODUCTO 5</a>
@@ -117,7 +121,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Foto -6-06.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-6.jpg') }}" alt="Foto 6"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">PRODUCTO 6</a>
@@ -129,7 +133,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Barra -07.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-7.jpg') }}" alt="Foto 7"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">PRODUCTO 7</a>
@@ -141,7 +145,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Living cheto-08.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-8.jpg') }}" alt="Foto 8"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">PRODUCTO 8</a>
@@ -153,7 +157,7 @@
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="img/Sillas Tiffani-09.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{ asset('img/assets/Foto-9.jpg') }}" alt="Foto 9"></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">PRODUCTO 9</a>
@@ -165,6 +169,7 @@
       </div>
     </div>
           
-
-
+    
 @endsection
+
+

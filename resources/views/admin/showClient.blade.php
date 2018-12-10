@@ -4,12 +4,18 @@
 
     <div class="row">
         <div class="col-6 offset-3">
-            <h3>Perfil del Usuario</h3>
-            <h4>{{ $user['name'] }}</h4>
+            <h2 align="center"> Perfil del Usuario</h2>
             <hr>
-                <ul class="unstyled-list">
-                    <li class="d-flex flex-row">{{ $user['email'] }}</li>
-                </ul>
+            <ul class="unstyled-list">
+                
+                <li class="d-flex flex-row">
+                    <h4> <strong><ins>Nombre:</ins></strong> {{ $user['name'] }}</h4>
+                </li>
+                
+                <li class="d-flex flex-row"> 
+                    <h4> <strong><ins>Email:</ins></strong> {{ $user['email'] }}</h4>
+                </li>
+            </ul>
             <hr>
         </div>
     </div>
