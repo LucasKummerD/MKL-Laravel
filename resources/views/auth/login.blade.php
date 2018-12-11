@@ -57,7 +57,7 @@
                                     {{ __('Iniciar Sesion') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="pt-3" href="{{ route('password.request') }}">
                                     {{ __('Olvidé mi contraseña?') }}
                                 </a>
                             </div>

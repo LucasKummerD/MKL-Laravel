@@ -26,7 +26,7 @@ Route::get('/master', 'HomeController@index')->name('master');
     
     Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo
     
-    Route::get('client/showProducts', 'ClientController@index')->name('perfil');                    //Funciona
+    Route::get('client/showProducts', 'ClientController@index')->name('products');                  //Funciona
     Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona                                
     
     Route::get('client/{id}/delete', 'ClientController@destroy');                                   //Para el carrito eliminar productos

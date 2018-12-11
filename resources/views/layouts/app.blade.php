@@ -5,7 +5,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #338bca;">
+        <nav class="navbar navbar-expand-md fixed-top" style="background-color: #338bca;">
             <div class="container">
                 <a class="navbar-brand " style="color:white" href="{{ url('/') }}">
                     <img class="navbar-brand" alt="Logo-MKL" src="{{ asset('img/assets/MKLNegro.png') }}">    
@@ -59,7 +59,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
         
