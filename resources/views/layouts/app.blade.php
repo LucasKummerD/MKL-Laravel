@@ -21,9 +21,10 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                        <ul>
                             <li class="nav-item">
                                 <a class="nav-link" style="color:white" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
                             </li>
@@ -32,27 +33,38 @@
                                     <a class="nav-link" style="color:white" href="{{ route('register') }}">{{ __('Crear Cuenta') }}</a>
                                 @endif
                             </li>
+                        </ul>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <ul >
+                            <li >
+                                <a class="nav-link" style="color:white"  href="#" role="button" >
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" style="background-color: #4a9ad3" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" style="color:white" href="">Datos Personales</a>
-                                    <a class="dropdown-item" style="color:white" href="">Seguridad</a>
-                                    <a class="dropdown-item" style="color:white" href="">Carrito</a>
-                                    <a class="dropdown-item" style="color:white" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar Sesion') }}
-                                    </a>
+                                <div class="d-flex flex-row justify-content-" style="background-color: #4a9ad3">
+                                   
+                                        <a style="color:white" href="">Datos Personales</a>
+                                   
+                                   
+                                        <a  style="color:white" href="">Seguridad</a>
+                                   
+                                   
+                                        <a  style="color:white" href="">Carrito</a>
+                                   
+                                    
+                                        <a  style="color:white" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">
+                                            {{ __('Cerrar Sesion') }}
+                                   
+                                </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
+                        </ul>
                         @endguest
                     </ul>
                 </div>
