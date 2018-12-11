@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer fixed-bottom ">
+<footer class="page-footer pt-5">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -65,8 +65,10 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-4">© 2018 Copyright
-      <a> PadLuk.com</a>
+    <div class="offset-4 col-md-8">
+        <div class="footer-copyright flex-center p-4">© 2018 Copyright
+            <a> PadLuk.com</a>
+        </div>
     </div>
     <!-- Copyright -->
 

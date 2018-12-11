@@ -22,10 +22,15 @@ Route::get('/master', 'HomeController@index')->name('master');
 
 //----- Cliente                                                                                     //Ver css con Lucas
 /* Route::groupe(['prefix' => 'admin', 'middleware' => 'auth'], function() { */
-    Route::get('client/home', 'ClientController@index');
+    Route::get('client/home', 'ClientController@index');                                            //Funciona
+    
+    Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo
+    
     Route::get('client/showProducts', 'ClientController@index')->name('perfil');                    //Funciona
-    Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
+    Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona                                
+    
     Route::get('client/{id}/delete', 'ClientController@destroy');                                   //Para el carrito eliminar productos
+    Route::get('client/{id}/delete', 'ClientController@destroy');
 /* }); */    
 
 
