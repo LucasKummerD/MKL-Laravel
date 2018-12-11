@@ -62,9 +62,12 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editProfile($id)
     {
-        //
+        /* $ user = User::find($id); */
+
+        return view('client.showProfile')
+                    ->with('user', $user);
     }
 
     /**

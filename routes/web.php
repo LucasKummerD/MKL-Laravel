@@ -24,12 +24,11 @@ Route::get('/master', 'HomeController@index')->name('master');
 /* Route::groupe(['prefix' => 'admin', 'middleware' => 'auth'], function() { */
     Route::get('client/home', 'ClientController@index');                                            //Funciona
     
-    Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo
-    
+    Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo que tenga boton de modificar datos! 
     Route::get('client/showProducts', 'ClientController@index')->name('products');                  //Funciona
-    Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona                                
-    
-    Route::get('client/{id}/delete', 'ClientController@destroy');                                   //Para el carrito eliminar productos
+    Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
+    Route::get('client/editProfile', 'ClientController@editProfile');                          //Vista Formulario datos     
+    Route::post('client/{id}/editProfile', 'ClientController@storeProfile');                        //Para guardar los cambios en la base de datos
     Route::get('client/{id}/delete', 'ClientController@destroy');
 /* }); */    
 
