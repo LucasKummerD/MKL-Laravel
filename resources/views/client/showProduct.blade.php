@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-6 offset-3 mt-5 pt-5">
         
-            <h2 align="center">Informacion del Producto</h2>            
+            <h2>Informacion del Producto</h2>            
         <hr>  
             <h6> <strong><ins>Nombre:</ins></strong> {{ $product->nombre }}</h6>
             <h6> <strong><ins>Descripción:</ins></strong> {{ $product->descripcion }}</h6> 

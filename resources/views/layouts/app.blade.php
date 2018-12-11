@@ -61,10 +61,8 @@
 
         <main>
             @yield('content')
-        </main>
-        
+        </main>        
     </div>
-
     @include('layouts.partials.footer')
     @include('layouts.partials.scripts')
 </body>
