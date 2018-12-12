@@ -93,4 +93,15 @@ class ClientController extends Controller
     {
         //
     }
+
+    public function lineas()
+    {
+        $categories = Category::all();
+        return view('client.lineas') -> with('categories', $categories);
+    }
+
+    public function productsCategory()
+    {
+        //
+    }
 }

@@ -20,12 +20,14 @@ Auth::routes();
 /* Route::view('/', 'master')->middleware('auth'); */                                               //Quiero que me loguee a master, pero loguea a login
 Route::get('/master', 'HomeController@index')->name('master'); 
 
-//----- Cliente                                                                                     //Ver css con Lucas
+//----- Cliente                                                                                     
 /* Route::groupe(['prefix' => 'admin', 'middleware' => 'auth'], function() { */
     Route::get('client/home', 'ClientController@index');                                            //Funciona
     
     Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo que tenga boton de modificar datos! 
-    Route::get('client/showProducts', 'ClientController@index')->name('products');                  //Funciona
+    Route::get('client/categories', 'ClientController@lineas');
+    Route::get('client/productsCategory', 'ClientController@productsCategory');
+    Route::get('client/showProducts', 'ClientController@index')->name('products');                  //Funciona. Paginar los productos
     Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
     Route::get('client/editProfile', 'ClientController@editProfile');                               //Vista Formulario datos     
     Route::post('client/{id}/editProfile', 'ClientController@storeProfile');                        //Para guardar los cambios en la base de datos
@@ -36,7 +38,7 @@ Route::get('/master', 'HomeController@index')->name('master');
 //----- Admin                                              
 /* Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() { */                      //Funciona. No entiendo que es el function
     Route::get('/home', 'AdminController@index');
-    Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona
+    Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona. Paginar los productos
     Route::get('/{id}/showProduct', 'AdminController@showProduct');                                 //Funciona
     Route::get('/create', 'AdminController@create')->name('admin_create');                          //Funciona
     Route::post('/create', 'AdminController@store');                                                //Funciona
@@ -49,4 +51,5 @@ Route::get('/master', 'HomeController@index')->name('master');
 
 
 //pasar los navbar a app en el condicional! como se podria hacer para que los navbar de admin y los nav del user ponerlos en  app
+//Falta el Carrito
 

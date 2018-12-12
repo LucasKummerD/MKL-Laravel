@@ -1,8 +1,8 @@
-@extends('layouts.masterClient')
+@extends('layouts.app')
 
 @section('content')
 
-    <div class="row">
+    <div class="row py-3">
         <div class="col-6 offset-3 mt-5 pt-5">
         
             <h2>Informacion del Producto</h2>            
