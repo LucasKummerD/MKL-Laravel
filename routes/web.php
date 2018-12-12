@@ -38,7 +38,7 @@ Route::get('/master', 'HomeController@index')->name('master');
 //----- Admin                                              
 /* Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() { */                      //Funciona. No entiendo que es el function
     Route::get('/home', 'AdminController@index');
-    Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona. Paginar los productos
+    Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona. Paginar los productos y vincularlos con los de la base de datos
     Route::get('/{id}/showProduct', 'AdminController@showProduct');                                 //Funciona
     Route::get('/create', 'AdminController@create')->name('admin_create');                          //Funciona
     Route::post('/create', 'AdminController@store');                                                //Funciona
