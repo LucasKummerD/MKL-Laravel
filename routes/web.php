@@ -25,8 +25,8 @@ Route::get('/master', 'HomeController@index')->name('master');
     Route::get('client/home', 'ClientController@index');                                            //Funciona
     
     Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo que tenga boton de modificar datos! 
-    Route::get('client/categories', 'ClientController@lineas');
-    Route::get('client/productsCategory', 'ClientController@productsCategory');
+    Route::get('client/categories', 'ClientController@showCategories');                             //Funciona
+    Route::get('client/categories/{id}/productsCategory', 'ClientController@productsCategory');     //Funciona
     Route::get('client/showProducts', 'ClientController@index')->name('products');                  //Funciona. Paginar los productos
     Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
     Route::get('client/editProfile', 'ClientController@editProfile');                               //Vista Formulario datos     

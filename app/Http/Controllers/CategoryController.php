@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Category;
+use App\Product;
 
 class CategoryController extends Controller
 {
@@ -47,6 +50,8 @@ class CategoryController extends Controller
     {
         //
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.

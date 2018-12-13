@@ -94,14 +94,18 @@ class ClientController extends Controller
         //
     }
 
-    public function lineas()
+    public function showCategories()
     {
         $categories = Category::all();
-        return view('client.lineas') -> with('categories', $categories);
+        return view('client.categories') -> with('categories', $categories);
     }
 
-    public function productsCategory()
+    public function productsCategory($id)
     {
-        //
+
+        $category = Category::find($id);
+        $product = Product::where('category_id', $id)->get();
+
+        return view('client.productsCategory')->with('category', $category)->with('product', $product);
     }
 }

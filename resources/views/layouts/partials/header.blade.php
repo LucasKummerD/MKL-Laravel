@@ -23,6 +23,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
