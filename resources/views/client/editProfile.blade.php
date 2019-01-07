@@ -16,33 +16,38 @@
                         <form action="" method="post">
                         @csrf
                             <div class="col-8 offset-sm-2 text-center my-3">
-                                <h2>{{ $user->name }}</h2>     
+                                <h2>{{ Auth::user()->name }}</h2>     
                             </div>
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Nombre y Apellido') }}</label>
+                            <label for="name" class="col-sm-4 col-form-label text-md-right">{{ __('Nombre y Apellido') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="{{ $user->name }}" >
+                                <input type="text" class="form-control" name="name" placeholder="{{ Auth::user()->name }}" >
                             </div>
                             
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Direccion de e-mail') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="{{ $user->email }}" >
+                                <input type="text" class="form-control" name="email" placeholder="{{ Auth::user()->email}}" >
                             </div>	
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Direccion de entrega') }}</label>
+                            <label for="direccion_de_entrega" class="col-sm-4 col-form-label text-md-right">{{ __('Direccion de entrega') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="direccion de entrega" placeholder="{{ $user->direccion de entrega }}" >
+                                <input type="text" class="form-control" name="direccion_de_entrega" placeholder="{{ Auth::user()->direccion_de_entrega }}" >
                             </div>
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Codigo Postal') }}</label>
+                            <label for="codigo_postal" class="col-sm-4 col-form-label text-md-right">{{ __('Codigo Postal') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="codigo postal" placeholder="{{ $user->codigo postal }}" >
+                                <input type="text" class="form-control" name="codigo_postal" placeholder="{{ Auth::user()->codigo_postal }}" >
                             </div>
 
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Cuit') }}</label>
+                            <label for="cuit" class="col-sm-4 col-form-label text-md-right">{{ __('Cuit') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="cuit" placeholder="{{ $user->cuit }}" >
-                            </div>                           
+                                <input type="text" class="form-control" name="cuit" placeholder="{{ Auth::user()->cuit }}" >
+                            </div>  
+
+                            <label for="telefono" class="col-sm-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="telefono" placeholder="{{ Auth::user()->telefono }}" >
+                            </div>                        
 
                             <div class="form-group col-lg-10 mx-auto">
                                 <label>Foto del Producto</label>
