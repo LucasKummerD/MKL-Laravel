@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('content')
   <div>         
           <div  id="carousel" class="carousel slide" data-ride="carousel">      
@@ -50,12 +49,9 @@
           </a>
         </div>
       </header>
-
-
 <!--------------------------------------------------------- Contenido ---------------------------------------------------------->
 
 <!--------------------------------------------------------- Productos ---------------------------------------------------------->
-
       <div class="container h6">
           <h1 class="my-4 py-4"><strong>PRODUCTOS DESTACADOS</h1>
         <div class="row">
@@ -168,9 +164,7 @@
           </div>
       </div>
     </div>
-  </div>
-          
-    
+  </div>  
 @endsection
 
 

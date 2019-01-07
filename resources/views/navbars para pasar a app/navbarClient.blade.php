@@ -24,7 +24,7 @@
                     <a class="dropdown-item" style="color:white" href=""></a>
                     <a class="dropdown-item" style="color:white" href="">Datos Personales</a>
                     <a class="dropdown-item" style="color:white" href="">Carrito</a>
-                    <a class="dropdown-item" style="color:white" href="{{ route('master') }}">Cerrar Sesion</a>
+                    <a class="dropdown-item" style="color:white" href="{{ route('logout') }}">Cerrar Sesion</a>
                 </div>
             </li>                
             </ul>

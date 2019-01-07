@@ -16,7 +16,16 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('client.categories') -> with('categories', $categories);
+    }
+
+    public function productsCategory($id)
+    {
+        $category = Category::find($id);
+        $product = Product::where('category_id', $id)->get();
+
+        return view('client.productsCategory')->with('category', $category)->with('product', $product);
     }
 
     /**
@@ -87,3 +96,5 @@ class CategoryController extends Controller
         //
     }
 }
+
+

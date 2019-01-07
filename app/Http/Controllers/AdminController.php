@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Category;
-use App\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -16,8 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('home')->with('products', $products);
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.create')->with('products', Product::all());
+        //
     }
 
     /**
@@ -38,32 +35,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = [
-            'nombre' => 'required',
-            'descripcion' => 'required',
-            'precio' => 'required',
-            'stock' => 'required',
-            'category_id' => 'required'
-        ];
-
-        $messages = [
-            'required' => 'el campo :attribute es requerido'
-        ];
-       
-
-        $this->validate($request, $rules, $messages);
-
-        $product = new Product($request->all());
-        
-        if($request->file('filepath') !== null) {
-            $file = $request->file('filepath')->store('uploads');
-            $product->filepath = $file;
-        }
-       
-        
-        $product->save();
-
-        return redirect('admin/showProducts');
+        //
     }
 
     /**
@@ -72,13 +44,9 @@ class AdminController extends Controller
      * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function showProduct($id)
+    public function show($id)
     {
-        $category = Category::all();
-        $product = Product::find($id);
-        return view('admin.showProduct')
-                    ->with('product', $product)
-                    ->with('category', $product->category); 
+        // 
     }
 
     /**
@@ -89,14 +57,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-
-        $category = Category::all();
-        $product = Product::find($id);
-
-        return view('admin.editProduct')
-            ->with('product', $product)
-            ->with('category', $product->category)
-            ->with('category', $category);
+        //
     }
 
     /**     
@@ -108,17 +69,7 @@ class AdminController extends Controller
      */
     public function update($id)
     {
-        $product = Product::find($id);
-
-        $product->nombre = input('nombre');
-        $product->descripcion = input('descripcion');
-        $product->precio = input('precio');
-        $product->stock = input('stock');
-        $product->category_id = input('category_id');
-        
-        $product->save();
-
-        return redirect("/products/$product->id");
+        //
     }
 
     /**
@@ -142,9 +93,6 @@ class AdminController extends Controller
     {
     $user = User::find($id);
     return view('admin.showClient')->with('user', $user);
-                
-                //va a haber que agregar mas cmapos!
-
     }
     
 }

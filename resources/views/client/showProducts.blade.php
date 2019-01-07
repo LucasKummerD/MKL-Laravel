@@ -5,6 +5,7 @@
     <div class="offset-2 col-8 py-5">
         <h1 class="pt-5 text-center">Listado de Productos</h1>
         <div>
+        {{ dd($categorias) }}
             <ul class="list-unstyled">
                 @foreach($products as $product)
                     <li class="buttons-admin">

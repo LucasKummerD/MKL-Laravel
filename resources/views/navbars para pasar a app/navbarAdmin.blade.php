@@ -16,7 +16,7 @@
                         <a class="dropdown-item" style="color: white" href="/admin/create">Insertar Productos</a>
                         <a class="dropdown-item" style="color: white" href="/admin">Productos</a> 
                         <a class="dropdown-item" style="color: white" href="">Perfil</a>
-                        <a class="dropdown-item" style="color: white" href="{{ route('master') }}">Cerrar Sesión</a>
+                        <a class="dropdown-item" style="color: white" href="{{ route('logout') }}">Cerrar Sesión</a>
                     </div>
             </li>                    
             </ul>

@@ -11,45 +11,37 @@
 |
 */
 
-Route::get('/', function () {
-    return view('master');  
-});
 
 Auth::routes();
 
-/* Route::view('/', 'master')->middleware('auth'); */                                               //Quiero que me loguee a master, pero loguea a login
-Route::get('/master', 'HomeController@index')->name('master'); 
+Route::get('/', 'HomeController@index')->name('master'); 
 
 //----- Cliente                                                                                     
-/* Route::groupe(['prefix' => 'admin', 'middleware' => 'auth'], function() { */
-    Route::get('client/home', 'ClientController@index');                                            //Funciona
-    
-    Route::get('client/{id}/showProfile', 'ClientController@showProfile');                          //Preguntar a Rodo y terminar de armarlo que tenga boton de modificar datos! 
-    Route::get('client/categories', 'ClientController@showCategories');                             //Funciona
-    Route::get('client/categories/{id}/productsCategory', 'ClientController@productsCategory');     //Funciona
-    Route::get('client/showProducts', 'ClientController@index')->name('products');                  //Funciona. Paginar los productos
-    Route::get('client/{id}/showProduct', 'ClientController@showProduct');                          //Funciona
-    Route::get('client/editProfile', 'ClientController@editProfile');                               //Vista Formulario datos     
-    Route::post('client/{id}/editProfile', 'ClientController@storeProfile');                        //Para guardar los cambios en la base de datos
-    Route::get('client/{id}/delete', 'ClientController@destroy');
-/* }); */    
+Route::group(['prefix' => 'client', 'middleware' => 'auth'], function() {
+    Route::get('/showProducts', 'ProductController@showProducts');                                  //Funciona
+    Route::get('/{id}/showProduct', 'ProductController@showProduct');                                  
+    Route::get('/home', 'ProductController@index');                                                 //Funciona-> pero cuando le puse el middleware dejo de funcionar!! 
+    Route::get('/{id}/showProfile', 'ClientController@showProfile');                                //No funciona.
+    Route::get('/categories', 'CategoryController@index');                                          //Funciona
+    Route::get('/categories/{id}/productsCategory', 'CategoryController@productsCategory');         //Funciona                              
+    Route::get('/editProfile', 'ClientController@editProfile');                                     //Vista Formulario datos     
+    Route::post('/{id}/editProfile', 'ClientController@storeProfile');                              //Para guardar los cambios en la base de datos
+});   
 
 
 //----- Admin                                              
-/* Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() { */                      //Funciona. No entiendo que es el function
-    Route::get('/home', 'AdminController@index');
-    Route::get('/showProducts', 'AdminController@index')->name('admin');                            //Funciona. Paginar los productos y vincularlos con los de la base de datos
-    Route::get('/{id}/showProduct', 'AdminController@showProduct');                                 //Funciona
-    Route::get('/create', 'AdminController@create')->name('admin_create');                          //Funciona
-    Route::post('/create', 'AdminController@store');                                                //Funciona
-    Route::get('/{id}/editProduct', 'AdminController@edit');                                        //Funciona
-    Route::patch('/{id}/editProduct', 'AdminController@update');                                    //No funciona. No genera el update
-    Route::get('/{id}/delete', 'AdminController@destroy');                                          //No funciona
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {                            //Funciona
+    Route::get('/create', 'ProductController@create');                                              //Funciona
+    Route::post('/create', 'ProductController@store');                                              //Funciona
+    Route::get('/{id}/editProduct', 'ProductController@edit');                                      //No funciona
+    Route::patch('/{id}/editProduct', 'ProductController@update');                                  //No funciona. No genera el update
+    Route::get('/{id}/delete', 'ProductController@destroy');                                        //No esta armada
     Route::get('/showClients', 'AdminController@showClients');                                      //Funciona
-    Route::get('/{id}/showClient', 'AdminController@showClient');                                   //Funciona
-/* }); */
+    Route::get('/{id}/showClient', 'AdminController@showClient');                                   //funciona
+});
 
 
 //pasar los navbar a app en el condicional! como se podria hacer para que los navbar de admin y los nav del user ponerlos en  app
 //Falta el Carrito
-
+//Va a haber que poner todas las categorias y con un middleware que le agregue cosas a el admin y listo
+//dar una pulida al front

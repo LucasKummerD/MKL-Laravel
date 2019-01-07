@@ -17,8 +17,8 @@ class CartsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('cantidad');
             $table->string('producto');
-            $table->float('precioUnitario', 5, 2);
-            $table->string('precioTotal', 7, 2);
+            $table->float('precio_unitario', 5, 2);
+            $table->string('precio_total', 7, 2);
             
             //$table->foreign('id_product')->references('id')->on('products');
             $table->timestamps();
