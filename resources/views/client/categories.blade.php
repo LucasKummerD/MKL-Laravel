@@ -21,5 +21,3 @@
         </div>
     </div>
 @endsection
-
-<!-- tendria que hacer una foreing key de product_id para que referencie el producto y la categoria=? -->

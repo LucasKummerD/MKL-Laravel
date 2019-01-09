@@ -27,7 +27,25 @@
                                     <a class="nav-link" style="color:white" href="{{ route('register') }}">{{ __('Crear Cuenta') }}</a>
                                 @endif
                             </li>           
-                        @else               
+                        @else 
+
+                            @if (Auth::check() && Auth::user()->role == 'admin')
+                            <ul>
+                                <a class="nav-link text-right" style="color:lightgrey"  href="#" role="button" >
+                                    {{ Auth::user()->name }}</a>
+                                <div class="d-flex flex-row" style="background-color:#338bca">   
+                                        <a style="color:white" class="px-2" href="client/categories">Lineas</a>
+                                        <a  style="color:white" class="px-2" href="client/showProducts">Productos</a>
+                                        <a  style="color:white" class="px-2" href="">Clientes</a>                                   
+                                        <a  style="color:white" class="px-2" href="">Carrito</a>                                    
+                                        <a  style="color:white" class="px-2" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Cerrar Sesion') }}</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </ul>
+
+                            @else             
                             <ul>
                                 <a class="nav-link text-right" style="color:lightgrey"  href="#" role="button" >
                                     {{ Auth::user()->name }}</a>
@@ -40,7 +58,8 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </ul>                       
+                            </ul>
+                            @endif                       
                         @endguest
                     </ul>
                 </div>

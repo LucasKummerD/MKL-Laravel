@@ -20,7 +20,7 @@ Route::get('/', 'HomeController@index')->name('master');
 Route::group(['prefix' => 'client', 'middleware' => 'auth'], function() {
     Route::get('/showProducts', 'ProductController@showProducts');                                  
     Route::get('/{id}/showProduct', 'ProductController@showProduct');                                  
-    Route::get('/home', 'ProductController@index');                                                 
+    Route::get('/home', 'ProductController@home');                                                 
     Route::get('/{id}/showProfile', 'ClientController@showProfile');                                
     Route::get('/categories', 'CategoryController@index');                                          
     Route::get('/categories/{id}/productsCategory', 'CategoryController@productsCategory');                                       

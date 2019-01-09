@@ -23,7 +23,9 @@ class CreateUsersTable extends Migration
             $table->integer('cuit')->nullable();
             $table->integer('telefono')->nullable();
             $table->string('password');
-            $table->integer('role')->nullable();
+            
+            $table->enum('role', ['admin', 'client'])->default('client');
+            
             $table->rememberToken();
             $table->timestamps();
         });
