@@ -17,7 +17,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('master'); 
 
 //----- Cliente                                                                                     
-Route::group(['prefix' => 'client', 'middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function() {
     Route::get('/showProducts', 'ProductController@showProducts');                                  
     Route::get('/{id}/showProduct', 'ProductController@showProduct');                                  
     Route::get('/home', 'ProductController@home');                                                 
@@ -30,7 +30,7 @@ Route::group(['prefix' => 'client', 'middleware' => 'auth'], function() {
 
 
 //----- Admin                                              
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {                            
+Route::group(['middleware' => 'auth', 'admin'], function() {                            
     Route::get('/create', 'ProductController@create');                                              
     Route::post('/create', 'ProductController@store');                                              
     Route::get('/{id}/editProduct', 'ProductController@edit');                                      

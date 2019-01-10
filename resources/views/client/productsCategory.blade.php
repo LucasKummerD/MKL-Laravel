@@ -10,7 +10,7 @@
                 <div class="d-flex justify-content-around">
                     <h5 class="offset-2 col-5">{{ $product->nombre }}</h5>
                     <div class="offset-4 col-4">
-                        <a href="" class="btn btn-info">Ver Producto</a> 
+                        <a href="" class="btn btn-info">Ver</a> 
                         <a href="" class="btn btn-info">Agregar a Carrito</a>
                     </div>
                 </div>
@@ -19,5 +19,5 @@
             @endforeach
         </ul>
     </div>
-
+    
 @endsection

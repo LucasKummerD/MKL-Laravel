@@ -14,7 +14,7 @@
                     <form action="" method="post" class="p-2">                    
                         {{ csrf_field() }}
                         {{ method_field('patch') }}
-                    <a href="/admin/{{ $user->id }}/showClient" class="btn btn-info" role="button">Ver Más</a>        
+                    <a href="/{{ $user->id }}/showClient" class="btn btn-info" role="button">Ver Más</a>        
                     </form> 
                 </div>
             </li>

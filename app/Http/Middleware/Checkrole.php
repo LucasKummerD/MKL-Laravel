@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class Checkrole
 {
@@ -18,7 +19,7 @@ class Checkrole
         if( Auth::check() && Auth::user()->role == 'admin') {
             return $next($request);
         } else {
-            return redirect('/denied');
+            return abort(403, 'No tiene permiso para ingresar.');
         }
     }
 }

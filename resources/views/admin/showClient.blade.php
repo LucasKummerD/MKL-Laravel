@@ -16,6 +16,7 @@
                     <h4> <strong><ins>Email:</ins></strong> {{ $user['email'] }}</h4>
                 </li>
             </ul>
+            <a href="/showClients" class="btn btn-info" role="button">Volver a Clientes</a>
             <hr>
         </div>
     </div>
