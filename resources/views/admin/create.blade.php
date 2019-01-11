@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="form-group col-10 m-auto col-sm-8 offset-sm-2">
-                                <button type="submit" class="btn btn-lg btn-block bg-purple font-white">Registrar Producto</button>
+                                <button type="submit" class="btn btn-lg btn-block bg-purple font-black">Registrar Producto</button>
                             </div>
                         </form>
                     </div>                        

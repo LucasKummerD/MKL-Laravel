@@ -3,18 +3,20 @@
 @section('content')
 
     <div class="beto offset-1 col-9">
-        <h2 class="text-center pb-5">{{ $category->name }}</h2>
+        <h2 class="text-center pb-5">Categoria: {{ $category->name }}</h2>
         <ul class="list-unstyled px-5 offset-1 col-12">
-            @foreach($category->products as $product)
+            @foreach($product as $product)
+                @if($product->category_id == $category->id)
                 <li>
                 <div class="d-flex justify-content-around">
-                    <h5 class="offset-2 col-5">{{ $product->nombre }}</h5>
-                    <div class="offset-4 col-4">
-                        <a href="" class="btn btn-info">Ver</a> 
-                        <a href="" class="btn btn-info">Agregar a Carrito</a>
+                    <h5 class="offset-1 col-5 pt-3">{{ $product->nombre }}</h5>
+                    <div class="offset-3 col-4">
+                        <a href="/{{$product->id}}/showProduct" class="btn btn-info col-3">Ver</a> 
+                        <a href="" class="btn btn-info col-5">Agregar a Carrito</a>
                     </div>
                 </div>
                 </li>
+                @endif
                 <hr>
             @endforeach
         </ul>

@@ -31,8 +31,7 @@
 
                             @if (Auth::check() && Auth::user()->role == 'admin')
                             <ul>
-                                <a class="nav-link text-right" style="color:lightgrey"  href="#" role="button" >
-                                    {{ Auth::user()->name }}</a>
+                                <a class="nav-link text-right" style="color:lightgrey"  href="#" role="button" >(Administrador) {{ Auth::user()->name }}</a>
                                 <div class="d-flex flex-row" style="background-color:#338bca">   
                                         <a style="color:white" class="px-2" href="/categories">Lineas</a>
                                         <a  style="color:white" class="px-2" href="/showProducts">Productos</a>
@@ -46,12 +45,14 @@
 
                             @else             
                             <ul>
-                                <a class="nav-link text-right" style="color:lightgrey"  href="#" role="button" >
+                            <div class="d-inline-block col-12">
+                                <a href=""><i class="fa fas fa-shopping-cart d-inline-block" style="color:white"></i></a>
+                                <a class="nav-link text-right d-inline-block" style="color:lightgrey"  href="#" role="button" >
                                     {{ Auth::user()->name }}</a>
+                            </div>
                                 <div class="d-flex flex-row" style="background-color:#338bca">   
                                         <a style="color:white" class="px-2" href="/categories">Lineas</a>
-                                        <a  style="color:white" class="px-2" href="/showProducts">Productos</a>                                   
-                                        <a  style="color:white" class="px-2" href="">Carrito</a>                                    
+                                        <a  style="color:white" class="px-2" href="/showProducts">Productos</a>                                    
                                         <a  style="color:white" class="px-2" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Cerrar Sesion') }}</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
