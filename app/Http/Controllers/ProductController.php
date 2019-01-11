@@ -21,7 +21,7 @@ class ProductController extends Controller
 
     public function showProducts() 
     {
-        $products = Product::paginate(10);
+        $products = Product::paginate(5);
         $categories = Category::all();
         return view('client.showProducts')->with('products', $products)->with('categories', $categories);
     }

@@ -5,9 +5,9 @@
     @if (Auth::user()->role == 'admin')
 
     <div class="row py-3">
-        <div class="col-6 offset-3 mt-5 pt-5">
+        <div class="col-6 offset-3">
         
-            <h2>Informacion del Producto</h2>                
+            <h2 class="pt-5 text-center">Informacion del Producto</h2>                
         <hr>
             <h6> <strong><ins>Nombre:</ins></strong> {{ $product->nombre }}</h6>
             <h6> <strong><ins>Descripción:</ins></strong> {{ $product->descripcion }}</h6> 
@@ -15,16 +15,16 @@
             <h6> <strong><ins>Stock:</ins></strong> {{ $product->stock }} Unidades</h6>
             <h6> <strong><ins>Categoria:</ins></strong> {{ $product->category_id }}</h6>
             <hr>
-            <a href="/showProducts" class="btn btn-info" role="button">Volver a Productos</a>
+            <a href="/showProducts" class="btn btn-info offset-4 col-4" role="button">Volver a Productos</a>
         </div>
     </div>
 
     @else
     
     <div class="row py-3">
-        <div class="col-6 offset-3 mt-5 pt-5">
+        <div class="col-6 offset-3">
         
-            <h2>Informacion del Producto</h2>                
+            <h2 class="pt-5 text-center">Informacion del Producto</h2>                
         <hr>
             <h6> <strong><ins>Nombre:</ins></strong> {{ $product->nombre }}</h6>
             <h6> <strong><ins>Descripción:</ins></strong> {{ $product->descripcion }}</h6> 
@@ -32,9 +32,11 @@
             <h6> <strong><ins>Stock:</ins></strong> {{ $product->stock }} Unidades</h6>
             <h6> <strong><ins>Categoria:</ins></strong> {{ $product->category_id }}</h6>
             <hr>
-            <a href="" class="btn btn-info">Agregar al Carrito</a>
-            <a href="" class="btn btn-info" role="button">Ver el Carrito</a>
-            <a href="/showProducts" class="btn btn-info" role="button">Volver a Productos</a>
+            <div class="d-inline-block offset-2 col-9">
+            <a href="" class="btn btn-info col-4">Agregar al Carrito</a>
+            <a href="" class="btn btn-info col-3" role="button">Ver el Carrito</a>
+            <a href="/showProducts" class="btn btn-info col-4" role="button">Volver a Productos</a>
+            </div>
         </div>
     </div>
 
