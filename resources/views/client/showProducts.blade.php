@@ -7,7 +7,8 @@
         <div class="offset-2 col-8 py-5">
             <div class="offset-3">
             <h1 class="d-inline-block">Listado de Productos</h1>
-            <a href="/create"><i class="fas fa-plus d-inline-block px-5 fa-3x" style="color:lightgreen" title="Agregar Producto"></i></a>
+            <a href="/create"><i class="fas fa-plus d-inline-block pl-5 fa-3x" style="color:lightgreen" title="Agregar Producto"></i></a>
+            <a href="/records"><i class="fas fa-plus d-inline-block pl-4 fa-3x" style="color:blue" title="Editar Productos Destacados"></i></a>
             </div>
             <div class="pt-5">
                 <ul class="list-unstyled">

@@ -39,6 +39,7 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
     Route::get('/{id}/delete', 'ProductController@destroy');                                       
     Route::get('/showClients', 'AdminController@showClients');                                      
     Route::get('/{id}/showClient', 'AdminController@showClient');
-    Route::get('/editHome', 'HomeController@editHome');
-    Route::post('/editHome', 'HomeController@storeHome');                                    
+    Route::get('/records', 'HomeController@records');
+    Route::get('/{id}/editHome', 'HomeController@edit');
+    /* Route::post('/{id}/editHome', 'HomeController@store'); */                                    
 });
