@@ -25,7 +25,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/categories', 'CategoryController@index');                                          
     Route::get('/categories/{id}/productsCategory', 'CategoryController@productsCategory');                                       
     Route::get('/{id}/editProfile', 'ClientController@editProfile');                                          
-    Route::post('/{id}/editProfile', 'ClientController@storeProfile');                             
+    Route::post('/{id}/editProfile', 'ClientController@storeProfile');
+                            
 });   
 
 
@@ -37,5 +38,7 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
     Route::patch('/{id}/editProduct', 'ProductController@update');                                  
     Route::get('/{id}/delete', 'ProductController@destroy');                                       
     Route::get('/showClients', 'AdminController@showClients');                                      
-    Route::get('/{id}/showClient', 'AdminController@showClient');                                   
+    Route::get('/{id}/showClient', 'AdminController@showClient');
+    Route::get('/editHome', 'HomeController@editHome');
+    Route::post('/editHome', 'HomeController@storeHome');                                    
 });

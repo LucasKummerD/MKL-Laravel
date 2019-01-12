@@ -1,10 +1,11 @@
-@extends('layouts.masterAdmin')
+@extends('layouts.app')
 
 @section('content')
-    <header class="bg-dark text-white">
+    <header class="bg-light">
         <div class="container text-center">
             <h1>Modificar Producto</h1>
-            <p class="lead">Ocupe los campos que quiere modificar.</p>   
+            <p class="lead">Ocupe los campos que quiere modificar.</p>
+            <hr>   
         </div>
     </header>
     <section class="bg-home">
