@@ -54,9 +54,11 @@
                                 <input type="file" name="">
                             </div>
 
-                            <div class="form-group col-10 m-auto col-sm-8 offset-sm-2">
-                                <button type="submit" class="btn btn-lg btn-block bg-purple font-black">Registrar Producto</button>
+                            <div class="form-group col-6 m-auto col-sm-8 offset-sm-2">
+                                <button type="submit" class="btn btn-success mt-3">Registrar Producto</button>
+                                <a href="/showProducts" class="btn btn-info my-3" role="button">Volver a Productos</a>
                             </div>
+                            <hr> 
                         </form>
                     </div>                        
                 </div>

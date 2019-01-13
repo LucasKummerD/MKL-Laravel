@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
     Route::get('/create', 'ProductController@create');                                              
     Route::post('/create', 'ProductController@store');                                              
     Route::get('/{id}/editProduct', 'ProductController@edit');                                      
-    Route::patch('/{id}/editProduct', 'ProductController@update');                                  
+    Route::post('/{id}/editProduct', 'ProductController@update');                                  
     Route::get('/{id}/delete', 'ProductController@destroy');                                       
     Route::get('/showClients', 'AdminController@showClients');                                      
     Route::get('/{id}/showClient', 'AdminController@showClient');

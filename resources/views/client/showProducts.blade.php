@@ -7,8 +7,8 @@
         <div class="offset-2 col-8 py-5">
             <div class="offset-3">
             <h1 class="d-inline-block">Listado de Productos</h1>
-            <a href="/create"><i class="fas fa-plus d-inline-block pl-5 fa-3x" style="color:lightgreen" title="Agregar Producto"></i></a>
-            <a href="/records"><i class="fas fa-plus d-inline-block pl-4 fa-3x" style="color:blue" title="Editar Productos Destacados"></i></a>
+            <a href="/create"><i class="fas fa-plus-circle d-inline-block pl-5 fa-2x text-center" style="color:lightgreen" title="Nuevo Producto"><h5>Nuevo Producto</h5></i></a>
+            <a href="/records"><i class="fas fa-edit d-inline-block pl-4 fa-2x text-center" style="color:blue" title="Editar Productos Destacados"><h5>Productos Destacados</h5></i></a>
             </div>
             <div class="pt-5">
                 <ul class="list-unstyled">
@@ -19,15 +19,21 @@
                             <div class="offset-2 col-8">  
                                 <a href="/{{ $product->id }}/showProduct" class="btn btn-info col-3" role="button">Ver Producto</a>
                                 <a href="/{{ $product->id }}/editProduct" class="btn btn-info col-3" role="button">Editar Producto</a>
-                                <a href="" class="btn btn-danger col-3" role="button">Eliminar Producto</a>
+                                <a href="/{{  $product->id }}/delete" class="btn btn-danger col-3" role="button">Eliminar Producto</a>
                             </div>
                         </div>     
                         </li>
                         <hr>
                     @endforeach
                 </ul>
+                    <form class="navbar-form navbar-left pull-right" method="GET" action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control text-center" placeholder="Nombre del Producto">
+                        </div>
+                        <button class="btn btn-dark pull-right" type="submit">Buscar</button>
+                     </form>
             </div>
-            {!! $products->render() !!}
+                {!! $products->render() !!}
         </div>
 
     @else

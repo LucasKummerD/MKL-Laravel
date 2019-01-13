@@ -53,7 +53,7 @@
 
 <!--------------------------------------------------------- Productos ---------------------------------------------------------->
       <div class="container h6">
-          <h1 class="my-4 py-4"><strong>PRODUCTOS DESTACADOS</h1>
+        <h1 class="my-4 py-4"><strong>PRODUCTOS DESTACADOS</h1> 
         <div class="row">
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">

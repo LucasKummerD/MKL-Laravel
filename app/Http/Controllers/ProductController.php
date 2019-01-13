@@ -119,7 +119,7 @@ class ProductController extends Controller
         $product->descripcion = input('descripcion');
         $product->precio = input('precio');
         $product->stock = input('stock');
-        $product->category_id = input('category_id');
+        $product->category_id = input('category_id');   
         
         $product->save();
 
@@ -134,7 +134,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        
+        $product->delete();
+        return redirect('/showProducts');
     }
 
     

@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-6 offset-3 pt-5">
-        <h4 class="text-center pb-3">Usuarios Activos</h4>
+        <h1 class="text-center pb-3">Usuarios Activos</h1>
         <ul class="unstyled-list">
         <hr>
             @foreach($users as $user)
