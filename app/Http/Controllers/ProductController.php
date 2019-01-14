@@ -19,9 +19,10 @@ class ProductController extends Controller
         return view('home');
     }
 
-    public function showProducts() 
+    public function showProducts(Request $request) 
     {
-        $products = Product::paginate(5);
+
+        $products = Product::search($request->nombre)->paginate(5);
         $categories = Category::all();
         return view('client.showProducts')->with('products', $products)->with('categories', $categories);
     }

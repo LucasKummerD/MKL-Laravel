@@ -6,9 +6,17 @@
 
         <div class="offset-2 col-8 py-5">
             <div class="offset-3">
-            <h1 class="d-inline-block">Listado de Productos</h1>
-            <a href="/create"><i class="fas fa-plus-circle d-inline-block pl-5 fa-2x text-center" style="color:lightgreen" title="Nuevo Producto"><h5>Nuevo Producto</h5></i></a>
-            <a href="/records"><i class="fas fa-edit d-inline-block pl-4 fa-2x text-center" style="color:blue" title="Editar Productos Destacados"><h5>Productos Destacados</h5></i></a>
+                <h1 class="d-inline-block">Listado de Productos</h1>
+                <a href="/create"><i class="fas fa-plus-circle d-inline-block pl-5 fa-2x text-center" style="color:lightgreen" title="Nuevo Producto"><h5>Nuevo Producto</h5></i></a>
+                <a href="/records"><i class="fas fa-edit d-inline-block pl-4 fa-2x text-center" style="color:blue" title="Editar Productos Destacados"><h5>Productos Destacados</h5></i></a>
+                
+                <form class="navbar-form" method="GET" action="">
+                    <div class="form-inline">
+                        <input type="text" class="form-control mr-2" name="nombre" id="search" placeholder="Nombre del Producto">
+                        <button class="btn btn-secondary col-2" type="submit">Buscar</button>
+                    </div>     
+                </form>
+
             </div>
             <div class="pt-5">
                 <ul class="list-unstyled">
@@ -26,12 +34,7 @@
                         <hr>
                     @endforeach
                 </ul>
-                    <form class="navbar-form navbar-left pull-right" method="GET" action="">
-                        <div class="form-group">
-                            <input type="text" class="form-control text-center" placeholder="Nombre del Producto">
-                        </div>
-                        <button class="btn btn-dark pull-right" type="submit">Buscar</button>
-                     </form>
+
             </div>
                 {!! $products->render() !!}
         </div>

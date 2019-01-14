@@ -12,4 +12,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function scopesearch($query, $nombre)
+    {
+        return $query->where('nombre', 'LIKE', "%$nombre%");
+    }
 }

@@ -1,0 +1,6 @@
+{!! Form::open(['route' => 'client.showProducts', 'method' => 'GET', 'class' => 'navbar-form']) !!}
+                    <div class="input-inline">
+                        {!! Form::text('nombre', null, ['class' => 'form-control', 'placeholder' => 'Buscar', 'aria-describedby' => 'search']) !!}
+                        <span class="glyphiocon glyphicon-search" aria-hidden="true"></span>
+                    </div>     
+                {!! Form::close() !!}
