@@ -53,7 +53,7 @@
                                 <div class="d-flex flex-row" style="background-color:#338bca">   
                                         <a style="color:white" class="px-2" href="/categories">Lineas</a>
                                         <a  style="color:white" class="px-2" href="/showProducts">Productos</a>
-                                        <a  style="color:white" class="px-2" href="/Auth::user()->id/showProfile">Perfil</a>                                     
+                                        <a  style="color:white" class="px-2" href="/{ Auth::user()->id }/showProfile">Perfil</a>                                     
                                         <a  style="color:white" class="px-2" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Cerrar Sesion') }}</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer('codigo_postal')->nullable();
             $table->integer('cuit')->nullable();
             $table->integer('telefono')->nullable();
+            $table->string('avatar')->nullable();
             $table->string('password');
             
             $table->enum('role', ['admin', 'client'])->default('client');

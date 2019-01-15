@@ -54,19 +54,19 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
-        $records = Home::find($id);
+        $records = Record::find($id);
 
-        $records->product1 = input('product1');
-        $records->product2 = input('product2');
-        $records->product3 = input('product3');
-        $records->product4 = input('product4');
-        $records->product5 = input('product5');
-        $records->product6 = input('product6');
-        $records->product7 = input('product7');
-        $records->product8 = input('product8');
-        $records->product9 = input('product9');
+        $records->product1 = $request->input('product1');
+        $records->product2 = $request->input('product2');
+        $records->product3 = $request->input('product3');
+        $records->product4 = $request->input('product4');
+        $records->product5 = $request->input('product5');
+        $records->product6 = $request->input('product6');
+        $records->product7 = $request->input('product7');
+        $records->product8 = $request->input('product8');
+        $records->product9 = $request->input('product9');
 
         
         $records->save();

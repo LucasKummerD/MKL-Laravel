@@ -79,6 +79,7 @@ class ClientController extends Controller
         $user->codigo_postal = $request->input('codigo_postal');
         $user->cuit = $request->input('cuit');
         $user->telefono = $request->input('telefono');
+        $user->avatar = $request->input('avatar');
        
         $user->save();
 

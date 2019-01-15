@@ -45,8 +45,8 @@
                             </div>                        
 
                             <div class="form-group col-lg-10 mx-auto">
-                                <label>Foto del Producto</label>
-                                <input type="file" name="">
+                                <label for="file">Foto de Perfil</label>
+                                <input type="file" name="avatar">
                             </div>
 
                             <div class="form-group col-10 m-auto col-sm-8 offset-sm-2">

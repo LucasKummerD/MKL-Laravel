@@ -13,7 +13,7 @@ class RecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('records',function(Blueprint$table){
+        Schema::create('records', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product1');
             $table->integer('product2');
