@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/categories', 'CategoryController@index');                                          
     Route::get('/categories/{id}/productsCategory', 'CategoryController@productsCategory');                                       
     Route::get('/{id}/editProfile', 'ClientController@editProfile');                                          
-    Route::post('/{id}/editProfile', 'ClientController@storeProfile');
+    Route::patch('/{id}/editProfile', 'ClientController@updateProfile');
                             
 });   
 
@@ -41,5 +41,5 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
     Route::get('/{id}/showClient', 'AdminController@showClient');
     Route::get('/records', 'HomeController@records');
     Route::get('/{id}/editHome', 'HomeController@edit');
-    /* Route::post('/{id}/editHome', 'HomeController@store'); */                                    
+    Route::patch('/{id}/editHome', 'HomeController@update');                                    
 });

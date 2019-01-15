@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="beto offset-1 col-9">
-        <h2 class="text-center pb-5">Categoria: {{ $category->name }}</h2>
+        <h2 class="text-center pb-5 text-capitalize">Categoria: {{ $category->name }}</h2>
         <ul class="list-unstyled px-5 offset-1 col-12">
             @foreach($product as $product)
                 @if($product->category_id == $category->id)

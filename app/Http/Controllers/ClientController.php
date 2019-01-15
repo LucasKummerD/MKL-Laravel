@@ -69,9 +69,20 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateProfile(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->direccion_de_entrega = $request->input('direccion_de_entrega');
+        $user->codigo_postal = $request->input('codigo_postal');
+        $user->cuit = $request->input('cuit');
+        $user->telefono = $request->input('telefono');
+       
+        $user->save();
+
+        return redirect("/$user->id/showProfile");
     }
 
     /**

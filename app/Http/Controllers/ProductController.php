@@ -70,7 +70,7 @@ class ProductController extends Controller
         
         $product->save();
 
-        return redirect('client/showProducts');
+        return redirect('/showProducts');
     }
 
     /**
@@ -96,13 +96,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::all();
         $product = Product::find($id);
 
         return view('admin.editProduct')
-            ->with('product', $product)
-            ->with('category', $product->category)
-            ->with('category', $category);
+            ->with('product', $product);
     }
 
     /**
@@ -112,19 +109,19 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
         $product = Product::find($id);
 
-        $product->nombre = input('nombre');
-        $product->descripcion = input('descripcion');
-        $product->precio = input('precio');
-        $product->stock = input('stock');
-        $product->category_id = input('category_id');   
-        
+        $product->nombre = $request->input('nombre');
+        $product->descripcion = $request->input('descripcion');
+        $product->precio = $request->input('precio');
+        $product->stock = $request->input('stock');
+        $product->category_id = $request->input('category_id');
+       
         $product->save();
 
-        return redirect("/products/$product->id");
+        return redirect("/$product->id/showProduct");  
     }
 
     /**

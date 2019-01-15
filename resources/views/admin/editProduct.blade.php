@@ -13,35 +13,32 @@
             <div class="row">
                 <div class="col-8 mx-auto bg-light rounded">
                     <div class="signup-form">
-                        <form action="" method="post">  <!-- controlador/insertar.php -->
-                        @csrf
+                        <form action="" method="POST" enctype="multipart/form-data">
+                        {{ method_field('PATCH') }}
+                        {{ csrf_field() }}
                             <div class="col-8 offset-sm-2 text-center my-3">
-                                <h2>{{ $product['nombre'] }}</h2>     
+                                <h2><strong>Producto:</strong>{{ $product->nombre }}</h2>
+                                <h4><strong>Codigo del Producto:</strong>{{ $product->id }}</h4>     
                             </div>
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Nombre del Producto') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nombre" placeholder="{{ $product->nombre }}" >
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre del Producto">
                             </div>
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Descripcion del Producto') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="descripcion" placeholder="{{ $product->descripcion }}" >
+                                <input type="text" class="form-control" name="descripcion" placeholder="Breve descripcion del Producto">
                             </div>	
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Precio del Producto') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="precio" placeholder="{{ $product->precio }}" >
+                                <input type="text" class="form-control" name="precio" placeholder="Precio del Producto">
                             </div>
                             
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Stock del Producto') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="precio" placeholder="{{ $product->stock }}" >
+                                <input type="text" class="form-control" name="stock" placeholder="Cantidad de unidades">
                             </div>
 
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Categoria del Producto') }}</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="id_categoria" placeholder="{{ $product->category->name }}" >
+                                <input type="text" class="form-control" name="category_id" placeholder="Indique la Categoria">
                             </div>                           
 
                             <div class="form-group col-lg-10 mx-auto">
