@@ -31,10 +31,6 @@
                 <li class="d-flex flex-row py-1"> 
                     <h5> <strong><ins>Telefono:</ins></strong> {{ $user->telefono }}</h5>
                 </li>
-
-                <li>
-                    <img src="" alt="">
-                </li>
             
             </ul>
             <a href="/showClients" class="btn btn-info offset-4 col-4" role="button">Volver a Clientes</a>

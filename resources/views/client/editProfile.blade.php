@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-8 mx-auto bg-light rounded">
                     <div class="signup-form">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="/{{ $user->id }}/editProfile" method="post" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
                         {{ csrf_field() }}
                             <div class="col-8 offset-sm-2 text-center my-3">
@@ -42,12 +42,12 @@
 
                             <div class="form-group">
                                 <input type="text" class="form-control" name="telefono" placeholder="Teléfono" >
-                            </div>                        
-
-                            <div class="form-group col-lg-10 mx-auto">
-                                <label for="file">Foto de Perfil</label>
-                                <input type="file" name="avatar">
                             </div>
+
+                            <div class="form-group mt-2">
+                                <label for="file">Editar Foto</label>
+                                <input type="file" name="avatar" value="{{ $user->avatar }}" >
+                            </div>                     
 
                             <div class="form-group col-10 m-auto col-sm-8 offset-sm-2">
                                 <button type="submit" class="btn btn-lg btn-block bg-purple font-white">Modificar</button>

@@ -10,6 +10,6 @@ class Record extends Model
 
     public function records() 
     {
-        return $this->hasOne(Products::class);
+        return $this->hasMany(Products::class);
     }
 }

@@ -13,7 +13,7 @@ class RecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('records', function (Blueprint $table) {
+        /* Schema::create('records', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product1');
             $table->integer('product2');
@@ -24,8 +24,9 @@ class RecordsTable extends Migration
             $table->integer('product7');
             $table->integer('product8');
             $table->integer('product9');
+            
             $table->timestamps();
-        });
+        }); */
     }
 
     /**
@@ -35,6 +36,6 @@ class RecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('records');
+        /* Schema::dropIfExists('records'); */
     }
 }
