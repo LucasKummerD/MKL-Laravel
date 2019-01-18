@@ -1,24 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-    <header class="bg-light">
-        <div class="container text-center">
-            <h1 class="mt-5">Modificar Producto</h1>
-            <p class="lead">Ocupe los campos que quiere modificar.</p>
-            <hr>   
+    <header class="bg-dark text-white">
+        <div class="container text-center pt-3 pb-1">
+            <h3>Editar Producto</h3>
+            <p>Ocupe los campos que quiere modificar</p>
         </div>
     </header>
     <section class="bg-home">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto bg-light rounded">
+                <div class="col-6 mx-auto bg-light rounded">
                     <div class="signup-form">
                         <form action="" method="POST" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
                         {{ csrf_field() }}
-                            <div class="col-8 offset-sm-2 text-center my-3">
-                                <h2><strong>Producto:</strong>{{ $product->nombre }}</h2>
-                                <h4><strong>Codigo del Producto:</strong>{{ $product->id }}</h4>     
+                            <div class="col-10 offset-1 text-center my-4">
+                                <h2><strong>Producto:</strong> {{ $product->nombre }}</h2>
+                                <h6><strong>Codigo del Producto:</strong> {{ $product->id }}</h6>     
                             </div>
                             
                             <div class="form-group">

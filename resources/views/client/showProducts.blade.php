@@ -10,7 +10,7 @@
                 <a href="/create"><i class="fas fa-plus-circle d-inline-block pl-5 fa-2x text-center" style="color:lightgreen" title="Nuevo Producto"><h5>Nuevo Producto</h5></i></a>
                 <a href="/records"><i class="fas fa-edit d-inline-block pl-4 fa-2x text-center" style="color:blue" title="Editar Productos Destacados"><h5>Productos Destacados</h5></i></a>
                 
-                <form class="navbar-form" method="GET" action="">
+                <form class="navbar-form pb-4 pt-3" method="GET" action="">
                     <div class="form-inline">
                         <input type="text" class="form-control mr-2" name="nombre" id="search" placeholder="Nombre del Producto">
                         <button class="btn btn-secondary col-2" type="submit">Buscar</button>
@@ -18,7 +18,7 @@
                 </form>
 
             </div>
-            <div class="pt-5">
+            <div class="py-5">
                 <ul class="list-unstyled">
                     @foreach($products as $product)
                         <li class="buttons-admin">
@@ -36,7 +36,9 @@
                 </ul>
 
             </div>
-                {!! $products->render() !!}
+                <div class="justify-content-center">
+                    {!! $products->render() !!}
+                </div>    
         </div>
 
     @else

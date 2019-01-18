@@ -20,9 +20,8 @@
                             <a>{{ $record->product7 }}</a>
                             <a>{{ $record->product8 }}</a>
                             <a>{{ $record->product9 }}</a> 
-                            <div class="offset-2 col-8">  
-                                <a href="{{$record->id}}/editHome" class="btn btn-info col-3" role="button">Editar Registro</a>
-                                <a href="" class="btn btn-danger col-3" role="button">Eliminar Registro</a>
+                            <div class="pull-right col-4">  
+                                <a href="{{$record->id}}/editHome" class="btn btn-info" role="button">Editar Registro</a>
                             </div>
                         </div>     
                         </li>

@@ -4,7 +4,7 @@
     <header class="bg-dark text-white">
         <div class="container text-center pt-3 pb-1">
             <h3>Carga de Stock</h3>
-            <p >Formulario para cargar productos.</p>
+            <p>Formulario para cargar productos.</p>
         </div>
     </header>
     <section class="bg-home">
@@ -21,11 +21,11 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto bg-light rounded">
+                <div class="col-6 mx-auto bg-light rounded">
                     <div class="signup-form">
                         <form action="" method="post">
                         @csrf
-                            <div class="col-8 offset-sm-2 text-center my-3">
+                            <div class="col-8 offset-sm-2 text-center my-4">
                                 <h2>Registrar producto</h2>
                             </div>
                             
