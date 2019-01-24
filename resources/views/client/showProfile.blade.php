@@ -21,11 +21,11 @@
                     <h6> <strong><ins>Codigo Postal:</ins></strong> {{ Auth::user()->codigo_postal }}</h6>
                     <h6> <strong><ins>CUIT:</ins></strong> {{ Auth::user()->cuit }}</h6>
                     <h6> <strong><ins>Telefono:</ins></strong> {{ Auth::user()->telefono }}</h6>
-                    <a href="/{{ Auth::user()->id }}/editProfile" class="btn btn-success col-6">Editar Perfil</a>
+                    <a href="/{{ Auth::user()->id }}/editProfile" class="btn btn-success col-12 pt-2">Editar</a>
                 </div>
             <hr>
                 <div class="text-center">  
-                    <a href="/home" class="btn btn-info col-3" role="button">Volver al Inicio</a>
+                    <a href="/home" class="btn btn-info col-3 pt-2" role="button">Volver al Inicio</a>
                 </div>
         </div>
     </div>

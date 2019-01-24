@@ -72,7 +72,7 @@ class ClientController extends Controller
     public function updateProfile(Request $request, $id)
     {
         
-        $request->file('avatar')->store('public');
+        $ruta = $request->file('avatar')->store('avatars', 'public');
 
         $user = User::find($id);
 
@@ -82,11 +82,11 @@ class ClientController extends Controller
         $user->codigo_postal = $request->input('codigo_postal');
         $user->cuit = $request->input('cuit');
         $user->telefono = $request->input('telefono');
-        $user->avatar = $request->file('avatar');
+        $user->avatar = $ruta;
        
         $user->save();
 
-        return redirect("/Auth::user()->id/showProfile");
+        return redirect("{id}/showProfile");
     }
 
     /**

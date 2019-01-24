@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('direccion_de_entrega')->nullable();
             $table->integer('codigo_postal')->nullable();
-            $table->integer('cuit')->nullable();
-            $table->integer('telefono')->nullable();
+            $table->string('cuit')->nullable();
+            $table->string('telefono')->nullable();
             $table->string('avatar')->default('default.jpg');
             $table->string('password');
             

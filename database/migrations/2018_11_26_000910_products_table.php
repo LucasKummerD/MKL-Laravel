@@ -20,9 +20,7 @@ class ProductsTable extends Migration
             $table->float('precio',5,2);
             $table->unsignedInteger('stock');
             $table->unsignedInteger('category_id');
-            /* $table->unsignedInteger('record_id');
             
-            $table->foreign('record_id')->references('id')->on('records'); */
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });

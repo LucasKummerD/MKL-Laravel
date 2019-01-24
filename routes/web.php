@@ -24,11 +24,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/{id}/showProfile', 'ClientController@showProfile');                                
     Route::get('/categories', 'CategoryController@index');                                          
     Route::get('/categories/{id}/productsCategory', 'CategoryController@productsCategory');                                       
-    Route::get('/{id}/editProfile', 'ClientController@editProfile');                                          
-    Route::patch('/{id}/editProfile', 'ClientController@updateProfile');
-    Route::get('/{id}/showProfile', 'ClientController@showProfile');                                          
-    Route::patch('/{id}/showProfile', 'ClientController@updatePhoto');
-
+    Route::get('{id}/editProfile', 'ClientController@editProfile');                                          
+    Route::patch('{id}/editProfile', 'ClientController@updateProfile');
+    Route::get('{id}/showProfile', 'ClientController@showProfile');
                             
 });   
 

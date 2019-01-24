@@ -20,7 +20,7 @@
             </div>
             <div class="py-5">
                 <ul class="list-unstyled">
-                    @foreach($products as $product)
+                    @forelse($products as $product)
                         <li class="buttons-admin">
                         <div class="d-flex justify-content-around">
                             <a class="offset-3 col-5 pt-3">{{ $product->nombre }} ${{ $product->precio }}.- {{ $product->stock }} unidades</a> 
@@ -32,7 +32,9 @@
                         </div>     
                         </li>
                         <hr>
-                    @endforeach
+                    @empty
+                        <h4>No se encuentran resultado para su Búsqueda.</h4>
+                    @endforelse
                 </ul>
 
             </div>
@@ -47,7 +49,7 @@
             <h1 class="text-center">Listado de Productos</h1>
             <div>
                 <ul class="list-unstyled">
-                    @foreach($products as $product)
+                    @forelse($products as $product)
                         <li class="buttons-admin">
                         <div class="d-flex justify-content-around">
                             <a class="offset-3 col-5">{{ $product->nombre }} ${{ $product->precio }}.- {{ $product->stock }} unidades</a> 
@@ -58,7 +60,9 @@
                         </div>     
                         </li>
                         <hr>
-                    @endforeach
+                    @empty
+                        <h4>No se encuentran resultado para su Búsqueda.</h4>
+                    @endforelse
                 </ul>
             </div>
             <div>
