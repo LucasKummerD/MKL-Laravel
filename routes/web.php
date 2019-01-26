@@ -47,7 +47,7 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
 
 //----- Carrito
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/cart', 'CartController@index');
+    Route::get('/cart', ['as'=>'cart-view', 'uses'=>'CartController@index']);
     Route::get('/cart/{product}/add', 'CartController@add');
     Route::get('/cart/{item}/delete', 'CartController@delete');
     Route::get('/cart/{item}/{cantidad}/update', 'CartController@update');

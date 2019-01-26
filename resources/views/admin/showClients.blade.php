@@ -9,6 +9,7 @@
         <hr>
             @foreach($users as $user)
             <li class="d-flex flex-row">
+                <img src="storage/{{ $user->avatar }}" width="50px" alt="">
                 <a class="mr-auto p-2">{{ $user->name }} - {{ $user->email }} </a>
                 <div class="buttons-admin d-flex">
                     <a href="/{{ $user->id }}/showClient" class="btn btn-info col-12" role="button">Ver Más</a>        

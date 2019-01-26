@@ -157,6 +157,7 @@ window.onload=function(){
         return true
         }
     }
+}
 
     //  ----------------- UPDATE ITEM CART ---------------------- //
 
@@ -172,4 +173,3 @@ window.onload=function(){
             window.location.href = href + '/' + cantidad;
         });
     });
-}

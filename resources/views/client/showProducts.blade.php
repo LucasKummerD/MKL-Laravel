@@ -23,6 +23,7 @@
                     @forelse($products as $product)
                         <li class="buttons-admin">
                         <div class="d-flex justify-content-around">
+                            <img src="/storage/{{ $product->image }}" alt="" width="50px">
                             <a class="offset-3 col-5 pt-3">{{ $product->nombre }} ${{ $product->precio }}.- {{ $product->stock }} unidades</a>
                             <input type="checkbox" name="" value=""><br> 
                             <div class="offset-2 col-8">  
@@ -53,8 +54,9 @@
                     @forelse($products as $product)
                         <li class="buttons-admin">
                         <div class="d-flex justify-content-around">
+                            <img src="/storage/{{ $product->image }}" alt="" width="50px">
                             <a class="offset-3 col-5">{{ $product->nombre }} ${{ $product->precio }}.- {{ $product->stock }} unidades</a> 
-                            <div class="offset-2 col-6">                                  
+                        <div class="offset-2 col-6">                                  
                                 <a href="/{{ $product->id }}/showProduct" class="btn btn-info col-3" role="button">Ver Producto</a>
                                 <a href="/cart/{{ $product->id }}/add" class="btn btn-success col-4">Agregar al Carrito</a>
                             </div>

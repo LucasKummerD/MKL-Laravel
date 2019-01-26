@@ -24,6 +24,35 @@ class CartController extends Controller
         return view('client.cart', compact('cart', 'total'));
     }
 
+    public function add(Product $product) 
+    {
+        $cart = \Session::get('cart');
+        $product->cantidad = 1;
+        $cart [$product->id] = $product;
+        \Session::put('cart', $cart);
+        
+        return redirect()->route('cart-view');
+    }
+
+    public function delete(Product $item) 
+    {
+        $cart = \Session::get('cart');
+        unset($cart[$item->id]);
+        \Session::put('cart', $cart);
+
+        return redirect()->route('cart-view');
+    }
+
+    public function update(Product $item, $cantidad) 
+    {
+        $cart = \Session::get('cart');
+        $cart [$item->id]->cantidad = $cantidad;
+        \Session::put('cart', $cart);
+
+        return redirect()->route('cart-view');
+
+    }
+
     public function total() 
     {
         $cart = \Session::get('cart');
@@ -34,35 +63,7 @@ class CartController extends Controller
         
         return $total;
     }
-
-    public function add(Product $product) 
-    {
-        $cart = \Session::get('cart');
-        $product->cantidad = 1;
-        $cart [$product->id] = $product;
-        \Session::put('cart', $cart);
-        
-        return view('client.cart');
-    }
-
-    public function delete(Product $item) 
-    {
-        $cart = \Session::get('cart');
-        unset($cart[$item->id]);
-        \Session::put('cart', $cart);
-
-        return view('client.cart');
-    }
-
-    public function update(Product $item, $cantidad) 
-    {
-        $cart = \Session::get('cart');
-        $cart [$item->id]->cantidad = $cantidad;
-        \Session::put('cart', $cart);
-
-        return redirect()->route('cart');
-
-    }
+    
 
     public function order()
     {
