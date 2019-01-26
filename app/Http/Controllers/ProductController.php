@@ -138,5 +138,12 @@ class ProductController extends Controller
         return redirect('/showProducts');
     }
 
+    public function productosDestacados() 
+    {
+        $products = Product::all();
+        $categories = Category::all();
+        return view('admin.productosDestacados')->with('products', $products)->with('categories', $categories);
+    }
+
     
 }

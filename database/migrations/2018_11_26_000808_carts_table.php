@@ -15,12 +15,12 @@ class CartsTable extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('cantidad');
             $table->string('producto');
-            $table->float('precio_unitario', 5, 2);
-            $table->string('precio_total', 7, 2);
-            
-            //$table->foreign('id_product')->references('id')->on('products');
+            $table->float('precio', 5, 2);
+            $table->unsignedInteger('cantidad');
+            $table->float('subtotal', 5, 2);
+            $table->string('imagen');
+
             $table->timestamps();
         });
     }

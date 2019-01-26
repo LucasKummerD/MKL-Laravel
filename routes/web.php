@@ -40,7 +40,17 @@ Route::group(['middleware' => 'auth', 'admin'], function() {
     Route::get('/{id}/delete', 'ProductController@destroy');                                       
     Route::get('/showClients', 'AdminController@showClients');                                      
     Route::get('/{id}/showClient', 'AdminController@showClient');
-    Route::get('/records', 'HomeController@records');
+    Route::get('/productosDestacados', 'ProductController@productosDestacados');
     Route::get('/{id}/editHome', 'HomeController@edit');
     Route::patch('/{id}/editHome', 'HomeController@update');                                    
+});
+
+//----- Carrito
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/cart', 'CartController@index');
+    Route::get('/cart/{product}/add', 'CartController@add');
+    Route::get('/cart/{item}/delete', 'CartController@delete');
+    Route::get('/cart/{item}/{cantidad}/update', 'CartController@update');
+    Route::get('/order', 'CartController@order');
+
 });
