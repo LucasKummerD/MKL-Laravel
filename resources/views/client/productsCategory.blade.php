@@ -12,7 +12,7 @@
                     <h5 class="offset-1 col-5 pt-3">{{ $product->nombre }}</h5>
                     <div class="offset-3 col-4">
                         <a href="/{{$product->id}}/showProduct" class="btn btn-info col-3">Ver</a> 
-                        <a href="" class="btn btn-success col-5">Agregar a Carrito</a>
+                        <a href="/cart/{{ $product->id }}/add" class="btn btn-success col-5">Agregar a Carrito</a>
                     </div>
                 </div>
                 </li>

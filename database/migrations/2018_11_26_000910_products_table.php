@@ -19,6 +19,8 @@ class ProductsTable extends Migration
             $table->string('descripcion');
             $table->float('precio',5,2);
             $table->unsignedInteger('stock');
+            $table->string('image')->default('prod_default.jpg');
+            /* $table->binary('destacados'); */
             $table->unsignedInteger('category_id');
             
             $table->foreign('category_id')->references('id')->on('categories');

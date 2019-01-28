@@ -62,11 +62,10 @@ class ProductController extends Controller
 
         $product = new Product($request->all());
         
-        if($request->file('filepath') !== null) {
-            $file = $request->file('filepath')->store('uploads');
-            $product->filepath = $file;
+        if($request->file('image') !== null) {
+            $file = $request->file('image')->store('products', 'public');
+            $product->image = $file;
         }
-       
         
         $product->save();
 
