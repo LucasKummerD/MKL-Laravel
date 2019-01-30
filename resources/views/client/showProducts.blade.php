@@ -25,7 +25,7 @@
                         <div class="d-flex justify-content-around">
                             <img src="/storage/{{ $product->image }}" alt="" width="50px">
                             <a class="offset-3 col-5 pt-3">{{ $product->nombre }} ${{ $product->precio }}.- {{ $product->stock }} unidades</a>
-                            <input type="checkbox" name="" value=""><br> 
+                            <br> 
                             <div class="offset-2 col-8">  
                                 <a href="/{{ $product->id }}/showProduct" class="btn btn-info col-3" role="button">Ver Producto</a>
                                 <a href="/{{ $product->id }}/editProduct" class="btn btn-info col-3" role="button">Editar Producto</a>

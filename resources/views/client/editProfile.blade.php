@@ -3,7 +3,7 @@
 @section('content')
 
  <header class="bg-dark text-white">
-        <div class="container text-center">
+        <div class="container text-center mt-2">
             <h1>Modificar Datos de Contacto</h1>
             <p class="lead">Ocupe los campos que quiere modificar.</p>   
         </div>

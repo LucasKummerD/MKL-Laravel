@@ -110,6 +110,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $image = $request->file('image')->store('product', 'public');
         $product = Product::find($id);
 
         $product->nombre = $request->input('nombre');
@@ -117,6 +118,7 @@ class ProductController extends Controller
         $product->precio = $request->input('precio');
         $product->stock = $request->input('stock');
         $product->category_id = $request->input('category_id');
+        $product->image = $image;
        
         $product->save();
 

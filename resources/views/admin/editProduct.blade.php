@@ -29,20 +29,20 @@
                             </div>	
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="precio" placeholder="Precio del Producto">
+                                <input type="number" class="form-control" name="precio" placeholder="Precio del Producto">
                             </div>
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="stock" placeholder="Cantidad de unidades">
+                                <input type="number" class="form-control" name="stock" placeholder="Cantidad de unidades">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" name="category_id" placeholder="Indique la Categoria">
+                                <input type="number" class="form-control" name="category_id" placeholder="Indique la Categoria">
                             </div>                           
 
                             <div class="form-group col-lg-10 mx-auto">
                                 <label>Foto del Producto</label>
-                                <input type="file" name="">
+                                <input type="file" name="image" value="{{$product->image}}">
                             </div>
 
                             <div class="form-group col-6 m-auto col-sm-8 offset-sm-2">
